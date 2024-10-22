@@ -1,0 +1,968 @@
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <head>
+<script type="text/javascript" src="../../fb_static/lib/jquery.js@version=0.0811"></script>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>系统思维</title>
+
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta name="renderer" content="webkit">
+
+<link href="../../fb_static/lib/pure.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/pure_patch.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/markdown/basic.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../template/style.scss@app=wiki%252Ffit.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">body {margin-left: 250px}
+.index {width: 250px}
+
+</style>
+  </head>
+
+  <body>
+
+
+    <div class="sidebar">
+      <div class="sidebar_body">
+        <div class="index">
+          <ul class="index_body">
+            <li class="title"><a href="../../index.html">易仁永澄的模型库</a>
+
+            </li>
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>1</b> 思维方式</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="value.html"  title="价值思维"  class="link_in_site"><b>1.1</b> 价值思维</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item active" >
+
+<a href="system.html"  title="系统思维"  class="link_in_site"><b>1.2</b> 系统思维</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>2</b> 框架模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/goldencircle.html"  title="黄金思维圈"  class="link_in_site"><b>2.1</b> 黄金思维圈</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/zhexue.html"  title="哲学+问题"  class="link_in_site"><b>2.2</b> 哲学+问题</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/cip.html"  title="CIP：认知信息加工理论"  class="link_in_site"><b>2.3</b> CIP：认知信息加工理论</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/nl6l.html"  title="理解层次"  class="link_in_site"><b>2.4</b> 理解层次</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>3</b> 技术模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../ji-zhu-mo-xing/tmbrt.html"  title="TMBRT-甜面包热汤模型"  class="link_in_site"><b>3.1</b> TMBRT-甜面包热汤模型</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../ji-zhu-mo-xing/dualcoredriverengine.html"  title="双核自驱引擎"  class="link_in_site"><b>3.2</b> 双核自驱引擎</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>4</b> 永澄暗箱</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../yong-cheng-an-xiang/pgossystemdynamicanalysis.html"  title="“个人成长操作系统”系统动力分析原理"  class="link_in_site"><b>4.1</b> “个人成长操作系统”系统动力分析原理</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+<div id="search_bar">
+
+
+  <input id="search_posts_keywords" placeholder="Search"  type="text" value="" />
+
+</div>
+
+
+
+<script>var search_base_url = "/";
+var search_under = "";
+$(document).ready(function() {
+    var search_posts_dom = $('#search_posts_keywords');
+    search_posts_dom.val("");
+
+    if (location.search.indexOf('?s=') === 0 && search_posts_dom.length) {
+          var old_keywords = search_posts_dom.val();
+          search_posts_dom.focus().val(old_keywords);
+    }
+    var search_posts = function(){
+        var keywords = search_posts_dom.val();
+        var url_to_jump = location.protocol + '//' + location.host + search_base_url + '?s=' + keywords;
+        if (search_under){ url_to_jump += "&under="+search_under}
+        location.href = url_to_jump;
+        return false
+    };
+
+    search_posts_dom.keyup(function(event) {
+          if (event.which === 13) {
+            search_posts()
+          }
+          return false;
+    });
+
+    $('.search_in_html_button').click(search_posts);
+})
+</script>
+
+
+
+
+
+    <div class="content">
+      <div class="content_body">
+        <h2 class="post_title">系统思维</h2>
+
+
+
+
+<div class="pure-g">
+
+
+
+<div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure-u-lg-4-5 pure_cell">
+
+
+        <div class="post_body markdown"><h2 id="toc_1">〇、引言</h2>
+
+<p class="md_block">
+    <span class="md_line">系统思维是一种思维方式，这就是它最简单的定义。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">什么是思维方式呢？我来尝试举例子来理解一下——当他人向你提出一个问题，比如说：“你怎么看待某某课程？”你要如何回答呢？你把自己假想成拍电影的导演，坐在监视器前看着这个画面：某人向你提问，你在思考。那你如何思考呢，是否有一些固有的套路呢？比如说：</span>
+</p>
+
+
+<ul>
+<li class="md_li">使用5W2H的方式来回答：这是什么课What、为什么要开这个课Why、课程适合谁来上Who……
+</li>
+<li class="md_li">使用六顶思考帽来回答：谈谈你感受、说说你的判断、从中获得什么利益、缺点是什么……
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">上述5W2H、六顶思考帽都是一种思维方式。只要按照方式所规定的顺序进行思考就会得到比较好的观点，这就是思维方式的价值。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">系统思维不仅仅是一种思维方式，它还是一种非常高级（掌握起来却很简单）的思维方式，是一种可以彻底解决问题的思维方式，是一种可以让你的认知瞬间跃迁的思维方式。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">为了弄清楚系统思维方式，我将框架式地提供以下知识点：</span>
+</p>
+
+
+<ul>
+<li class="md_li">系统思维是什么？
+</li>
+<li class="md_li">系统思维的两种视角是什么？
+</li>
+<li class="md_li">系统是什么？
+</li>
+<li class="md_li">系统如何分类？
+</li>
+<li class="md_li">系统思维的价值是什么？
+</li>
+<li class="md_li">如何刻意训练系统思维？
+</li>
+<li class="md_li">其他重要推论
+</li>
+<li class="md_li">应用范例
+</li>
+</ul>
+
+<h2 id="toc_2">一、系统思维及两种视角</h2>
+
+<h3 id="toc_3">（一）系统思维三大要素</h3>
+
+<p class="md_block">
+    <span class="md_line">刚刚提到过，思维方式其实是一个有规则的套路——先考虑什么、再考虑什么等。作为思维方式的一种，系统思维必然也有其套路，从最简单的角度来看，系统思维只需要关注三个要素：<strong>输入、系统、输出</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../思维方式/_image/system-01.png" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">这就是系统思维，我们来看两个例子来更好地理解。</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">一个Casio的计算器，如果我们用系统思维来看待它，那你按下计算器上的按键就是“输入”，经过计算器的计算，也就是“系统”后，得到了屏幕上显示的计算结果，也就是“输出”。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">你是一个运营主管，让你组织一个会议，你驾轻就熟地组织、通知、准备、实施，最后取得会议成果。那么，从最简单的角度来看，你就是“输入”，会议成果是“输出”，其他的都可以打包成“系统”。当然，你也可以将其他人都当作“输入”，这样系统可能会略有变化。</span>
+</p>
+
+</blockquote>
+
+<h3 id="toc_4">（二）观察系统的两种视角</h3>
+
+<p class="md_block">
+    <span class="md_line">从这两个例子，我们也可以获得系统思维的两种视角：<strong>黑箱（盒）视角和白箱（盒）视角</strong>。<br /></span>
+    <span class="md_line">所谓的黑箱视角，就是把系统当作一个整体，而里面是什么样的，你根本不需要关心。你只要知道这个黑箱可以实现某功能就好了，至于它究竟是如何实现的，就不那么重要了。所以，我们<strong>把黑箱视角称为用户视角</strong>，用户只关心这个系统好不好用，不关心究竟怎么发挥作用的。<br /></span>
+    <span class="md_line">对应的白箱视角，恰好是反过来的，相当于你把“系统”这个箱子打开，看看里面究竟是如何构成的（在下一部分会介绍系统的定义），如果系统是一个套娃，白箱视角就是一层层打开来看系统内部的究竟。所以，我们还可以<strong>把白箱视角称为专家视角</strong>，如果你对某一个领域的系统有多层次、多维度的白箱视角，你必然是这个领域的专家。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">本文我首发在我的公众号里，当时提出一个问题，就是观察对自己更有竞争优势的个体，他们拥有什么样的白箱，读者的留言中出现非常明显的倾向：当他们观察超出自己的那些人的白箱时，自己有了很明确的努力方向。具体见<a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485921&idx=1&sn=920e14e318b5ac893be4577409ec36be">原文</a>。</span>
+</p>
+
+
+<h2 id="toc_5">二、系统的定义、三元素和分类</h2>
+
+<p class="md_block">
+    <span class="md_line">按理说，已经说完系统思维是什么，就要开始谈谈如何使用系统思维了，但是，为了更深刻地理解，我们先针对系统思维中的“系统”，尝试使用简单的白箱视角进行分析，让你有更深刻的印象，以便未来使用。</span>
+</p>
+
+
+<h3 id="toc_6">（一）系统的定义</h3>
+
+<p class="md_block">
+    <span class="md_line">系统是什么？我们来看看它的定义：<strong>系统是一组彼此有关系的元素，相互依赖、相互作用形成的一个整体</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../思维方式/_image/屏幕快照&#32;2017-08-29&#32;21.12.41.jpg" alt="" title="" ></span>
+</p>
+
+
+<h3 id="toc_7">（二）系统的三要素</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">看一下上面的示意图，我把系统的内部做了展开，这样就可以得到<strong>系统的三要素</strong>（注意，未来会经常提起系统三要素）：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>系统的元素</strong>。简称“元素”，即构成系统的各部分；
+</li>
+<li class="md_li"><strong>元素之间的关系或结构</strong>。简称“关系”或“结构”，即各个元素之间的相关作用形成的构架；
+</li>
+<li class="md_li">系<strong>统的功能</strong>。简称“功能”，因为各个元素之间相互作用、形成某种结构，系统就形成了功能，比如计算器的加减乘除、行政主管组织会议等。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">特别强调：<strong>未来再看到元素、关系或结构、功能，你要立刻想到这是系统思维中对“系统”的描述</strong>，这些词（尤其是关系、结构）会频繁出现在我的文章中。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">总结一下，究竟什么是系统呢？<strong>只要是可以看成一个整体的都是系统</strong>，比如说计算器、大型超市、人际关系、个人成长、创业、问题解决、投融资、城市规划、企事业单位、一个班的学生……都可以当做系统。再说一次，只要可以看做成一个整体的就是系统，你可以想象系统的应用范围得有多么广泛。</span>
+</p>
+
+
+<h3 id="toc_8">（三）系统的两种分类方式</h3>
+
+<p class="md_block">
+    <span class="md_line">系统可以按照两种不同的方式进行划分，分别是：<strong>按复杂程度划分可以分为简单系统和复杂系统（你想象成一个坐标轴的两端），按是否有外部意图可以分为自组织系统和他组织系统</strong>。</span>
+</p>
+
+
+<h4 id="toc_9">1. 简单系统和复杂系统</h4>
+
+<p class="md_block">
+    <span class="md_line">首先我们来看按照复杂程度划分的简单系统和复杂系统。由于我们的目的是加深了解，而不是做科学研究，所以我们只讨论极端的简单系统和复杂系统。区分两者的标准是：<strong>系统输出是否可以预测</strong>，如果可以预测，那就是简单系统，反之就是复杂系统。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">来看常见的简单系统的范例：线性系统和复利曲线。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../思维方式/_image/屏幕快照&#32;2017-08-03&#32;21.39.05.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../思维方式/_image/屏幕快照&#32;2017-08-29&#32;21.40.57.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">线性系统的函数表示为：y=kx+C，这是一个一元一次方程，而复利曲线的函数表示为：A`=A(1+x)^n，虽然复利曲线是个非线性曲线，但是因为它的公式一定，输出是可以预测的，所以，复利曲线也是一个简单系统。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">复杂系统的特点是输入经过系统之后，输出是无法确定的，只能通过概率进行判断，更有可能是什么样的输出。我们所处的世界是一个复杂系统，因果关系不明确、不直接、不单一、甚至经常互为因果，所以，如果用简单系统的思维方式（例如：单因果思维、线性思维）去思考实际问题，通常会掉坑。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">复杂系统是当今时代的前沿研究学科，它衍生出大量其他学科，例如博弈论、群体性行为、网络分析、进化论、模式形成、系统理论、系统动力学等。持续了解复杂系统，可以让我们获得观察事物更加真实的视角。</span>
+</p>
+
+
+<h4 id="toc_10">2. 他组织和自组织系统</h4>
+
+<p class="md_block">
+    <span class="md_line">另外，我们再来看<strong>按照是否有外部意图进行划分的系统：他组织系统和自组织系统</strong>。<br /></span>
+    <span class="md_line">为了实现某种功能，人为设定系统元素及关系/结构，这种系统就是他组织系统，比如说电脑、供热系统、办事大厅等都是他组织系统。他组织系统最关心的就是系统功能稳定，当有输入的时候，就必然对应某输出。想想看，如果你用计算器，按下按键“1”，屏幕上随即出现了一朵花，或者计算器直接爆炸，那这个他组织系统一定是失败的。<br /></span>
+    <span class="md_line">如果没有外部意图的系统，就是自组织系统。自组织系统是复杂系统研究的重点，大量的系统元素在一起彼此发生关系，进而形成单一元素所不具备的全新功能，也就是“涌现”现象，是自组织系统的特点。常见的自组织系统有：鸟群、沙丁鱼群、体育场的人浪、免疫系统、气象系统、人类大脑，甚至人类社会也是一个自组织系统。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">自组织系统中有四个要点必须要加强关注：</span>
+</p>
+
+
+<ul>
+<li class="md_li">涌现。系统整体具备系统局部所不具备的智慧/能力，推荐一本书：《完美的群体》大量介绍涌现现象。
+</li>
+<li class="md_li">长周期时间视野。一个自组织系统之所以可以涌现功能，必须要经过很长时间之后才行。这一点很有启发，当你在复杂系统中，真正高价值往往来自涌现出的结果，如果你追求短期收益，很有可能无法获得真正的高价值。
+</li>
+<li class="md_li">自适应关系。一个复杂系统背后有着极简的规律，在《完美的群体》中提到Boids三定律，用三条非常简单的规律，就可以用计算机模拟鸟群飞行。体育场的人浪，看上去很有气势，但其实每个人遵守的规则是极其简单的。
+</li>
+<li class="md_li">极大规模的元素。只有大量元素在一起相互作用，才能出现涌现现象。这点的启发是在万物互联的时代下，我们要尽可能融入到更大规模的社会系统中去，才能享受系统变化的红利。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">说到这里，要做一个小总结：我们通常使用系统思维来分析和判断问题、做出决策，其实是广泛使用自组织系统和复杂系统的原理。强烈推荐一本介绍复杂系统的入门书《复杂》，力推力荐！</span>
+</p>
+
+
+<h2 id="toc_11">三、系统思维的价值</h2>
+
+<p class="md_block">
+    <span class="md_line">系统思维的价值是什么？<strong>所谓价值，指的是当你掌握之后可以获得的收益。</strong>那么，掌握系统思维之后能获得什么收益呢？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">思考问题需要模型支撑，这里我引用科学理论的四个价值点来理解这个问题，分别是：<strong>理解、判断、决策和改变</strong>。掌握系统思维可以帮助我们更好地理解事物、找出原因、正确决策和获得相应改变。</span>
+</p>
+
+
+<h3 id="toc_12">（一）理解</h3>
+
+<p class="md_block">
+    <span class="md_line">之前提到过，任何可以视为一个整体的都是系统，这句话本身就帮助我们更好地理解事物。在遇到任何事情时，我们都可以想办法将其理解为三个部分：输入、系统、输出，通过整体打包（封装）的思维方式，化繁为简，快速获得对事物的理解。<br /></span>
+    <span class="md_line">拿我平时开发课程来举例子吧（为了贴合你的实际，你可以想一个自己的常态工作）。如果要开发课程，怎么使用系统思维来思考呢？先把系统的图画出来，然后输入端画上一个小人，中间的系统上写着黑箱，然后输出的时候再画一个小人，并给小人画个笑脸。这时候，你就可以思考，一个人通过这个黑箱系统能得到什么呢？这就是用户收益。然后，再考虑把黑箱一层层地打开，看看里面都是什么，也就是说如何设置黑箱可以让用户变成输出端的样子呢？<br /></span>
+    <span class="md_line">这是创造的例子，对于已经发生的事情，也可以用系统思维来理解。比如说，老板给你了一份Q2的报表，问你对市场行情的看法，面对这样开放式的问题怎么回答呢？依然可以把报表上的数据当做输出，上个月的情况作为输入，因为系统的因素导致了输出的产生。那么，如何分析市场呢？只要使用白箱视角打开箱子就好了。虽然问题还没解决，但是，可以把复杂的内容找到一个极简的切入点入手了。</span>
+</p>
+
+
+<h3 id="toc_13">（二）判断</h3>
+
+<p class="md_block">
+    <span class="md_line">如果说系统思维可以帮助你简单、快速地理解事物，那么，系统思维可以帮助你快速判断出问题的关键点。系统为何可以帮助我们进行判断呢？这源自于系统的三大要素：元素、关系/结构、功能。<br /></span>
+    <span class="md_line">还拿前面的例子来看，在我们理解事物时候，已经知道输入通过系统之后产生输出，接下来就要打开黑箱了。来看一个课程的设计，既然课程是个系统，那么，这其中有什么元素呢？元素之间是什么关系呢？这个问题并不容易回答，但是一旦找到之后，就不至于瞎搞课程了。比如说，用户、知识、模型、工具、授课过程、服务……这都是元素，然后要根据自己的实践经验去找寻这些元素之间的关系，并尝试将其形成结构。这里加一句，系统思维是高级思维方式，上手容易、精深难，如果能做到分析系统结构，至少要训练3—5年吧。但是，一旦养成，就会瞬间拉动自己的发展速度。<br /></span>
+    <span class="md_line">古典老师在《跃迁》一书的第四章里，提到了多层次系统的控制点问题，建议阅读书中NBA的案例，可以理解系统思维对判断的价值。</span>
+</p>
+
+
+<h3 id="toc_14">（三）决策</h3>
+
+<p class="md_block">
+    <span class="md_line">这里需要稍微说一下，我们通常会把判断和决策作为一个整体，将其称之为决策。但是，由于我把判断分开之后，原来“决策”的概念范围就变小了。<br /></span>
+    <span class="md_line">决策是一种做出决定的能力，虽然我们每个人无时无刻不在做出选择，但是，决定一个事业体发展的决策者是极为孤独的。虽然我们可以理解、分析、判断出重点，但是，究竟在哪个时间点上做出什么样的决定，只有决策者自己承担。站在系统的角度来看，输入进入系统之后，会成为系统的一部分（对于自组织系统而言），而系统在输出之后，对于输出的结果基本没有掌控，换句话说：系统输出后，输出会处于失控状态。那么，一个决策者，如何面对失控的结果呢？但凡你站在决策者的角度，就会感受到这个孤单。另外，再到自组织系统的角度上来看，系统的输出会重新进入系统，产生并不知道何种可能的系统功能，而这种改变是延时的，决策者只能承受这种压力。<br /></span>
+    <span class="md_line">所以，对于决策者而言，多维度的系统思维的价值是无穷的，它会给决策者带来稳定的思维方式，让自己更有决心做出决策，并耐心等待改变的出现。</span>
+</p>
+
+
+<h3 id="toc_15">（四）改变</h3>
+
+<p class="md_block">
+    <span class="md_line">掌握系统思维之后，对改变的帮助实在是太大了！还是那句话，因为所有可以看做成一个整体的对象都可以嵌套上系统的思维方式，所以，基本上所有关于改变的方法都可以和系统挂上钩。<br /></span>
+    <span class="md_line">这里只把一些比较关键的方法做下简单介绍。<br /></span>
+    <span class="md_line">Point 1：第二序改变。在自组织系统中，有一种叫做序参量的变量，序参量的改变会对系统产生巨大的改变。第二序改变就是对系统的关系和结构进行调整改变的方式，相应的第一序改变，通常只是在元素的小范围上做出改变，或者对系统的功能做表面上的调整，改变也是低效的。关于第二序改变，强烈建议阅读《改变-问题形成和解决的原则》，这是一本关于改变的神作。<br /></span>
+    <span class="md_line">Point 2：三层系统。关于三层系统，我已经写过相关文章，请详见<a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485809&idx=1&sn=39a708fb5ee4fbadae46d50ead7cdeec">《为什么有的问题就是解决不了》</a>、<a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485827&idx=1&sn=28daae77da86d0d17704a59898da48a9">《问题的唯一原因，用三层系统给出解释》</a>。第一篇文章中也提到了维度的概念，也谈到了无法解决的问题是如何出现的，以及如何用三层系统解决这种无法解决的问题。<br /></span>
+    <span class="md_line">Point3：复杂系统自影响。复杂系统的输出可能就是输入，某一个结果可能是原因的原因（例如复利）等，所以，站在系统思维的角度，输入、系统和输出彼此之间还会产生效应。输入可以通过系统驱动输出、输出可以倒逼系统来调整输入。</span>
+</p>
+
+
+<h3 id="toc_16">（五）小结</h3>
+
+<p class="md_block">
+    <span class="md_line">好了，以上便是系统思维的价值的构架。当然，谈价值可以用各种方式来构架，我只是用了4个要素尝试构架起来，以帮助你更好地将其结构化，不代表我说的就是唯一的价值。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">我希望不要因为我写作能力的原因，让你小看了系统思维的价值，这种构架方式，可能只能将系统思维的价值呈现10%。体验大于理解，希望你能去尝试、去刻意练习系统思维吧，具体方法请继续往下看。</span>
+</p>
+
+
+<h2 id="toc_17">四、如何可以训练系统思维</h2>
+
+<h3 id="toc_18">（一）维度</h3>
+
+<p class="md_block">
+    <span class="md_line">正式开始之前，我要谈一下维度的问题。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">我已经写过相关的文章了，请移步至<a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485809&idx=1&sn=39a708fb5ee4fbadae46d50ead7cdeec">《为什么有的问题就是解决不了》</a>进行查看。为了便于了解相关内容，我做一下总结。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">所谓的维度，在狭义角度来看，我们将其定义为时空坐标系坐标的数量，比如说有x和y坐标，那就是二维；如果有z坐标，就是三维。从广义的角度来看，<strong>维度指的是允许某种东西自由变化的范围，每多一个维度，这个事物就可以在全新的范围上进行变化</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">广义的概念需要反复理解，每次提到升维、降维的时候，就可以去好好对照概念去理解，因为它很常见、很重要。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">关于维度有一些推论，这里只给出结论：</span>
+</p>
+
+
+<ul>
+<li class="md_li">高维信息密度高、信息量大、抽象程度高。在问题解决中经常提到的“升维思考”、创业里的“跨界打击”，都是增加维度的意思，当维度增加了，可以在很小的范围内囊括更多的信息。
+</li>
+<li class="md_li">低维是高维的切片。二维平面是三维立体的切片，三维立体是四维的切片。因为我们对“切片”的认知，都是基于三维转二维的，所以很难理解“三维是四维的切片”的概念，我们可以用“内含性”、“超越性”来理解，低维包含着高维的信息，高维超越低维所包含的信息。
+</li>
+<li class="md_li">高维在低维展开，会在低维空间中无限扩张。想象圆柱体的压缩，当压成一个没有高度的饼的时候，面积是无限大的。《三体3》中提到了歌者的武器二向箔，可以把三维世界压缩到二维平面，那个平面会无限展开，就是同样的概念。此外，“降维打击”、“降维碾压”等概念，都是指向这个推论的。
+</li>
+<li class="md_li">高维比低维拥有更多的视角。比如说你去动物园看猴山，你就可以拥有猴子和观察者的视角；不知道你看没有看过美剧《西部世界》，也是同样的道理。更高维度的系统拥有低维系统所不可见的视野。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">我认识很多画家朋友，他们有一句话叫“<strong>边界之外、平面之上</strong>”，这是绘画创作的更高境界。啥意思呢，比如说一张A4纸，你在纸面上创造，普通人就想怎么把纸画满，而高手认为这张纸是无限延伸的，是一副完整画面的局部，当你把整个画面都想清楚，取出这幅画才更有力量。高手都明白“一幅画只是想象的起点”这句话的意义，如果想象空间在画面里，那就是考虑技术问题，如果是在画面之外，那就是艺术。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">所以，<strong>不断升维的能力，其实是一种艺术</strong>。面对任何生产环节，都去尝试思考进入更高维度，不仅仅可以带来自我突破，更能产生与众不同的竞争优势。</span>
+</p>
+
+
+<h3 id="toc_19">（二）两种方法</h3>
+
+<p class="md_block">
+    <span class="md_line">当理解维度之后，我们基本上可以从两个方面来谈如何刻意练习系统思维了。</span>
+</p>
+
+
+<h4 id="toc_20">1. 基础方法</h4>
+
+<p class="md_block">
+    <span class="md_line"><strong>基础方法就是将一切都用系统思维来理解。</strong>既然一切可以当作整体都是系统，那我们在任何时候都问问自己：“这个对象是否可以当作系统来思考呢？如果可以要如何思考呢？能够将哪些原理应用上去呢?”<br /></span>
+    <span class="md_line">这两天有人说我，为什么我谈什么都是张嘴闭嘴说系统，我是不是很狭隘、很无趣，只会谈些别人听不懂的东西？其实，我也是在刻意练习，尝试着看看是否可以用这种思维方式构建一个稳定的解释系统，来帮我解释遇到的各种事情，并且还可以比一般人拥有更高维度的视野来看待。<br /></span>
+    <span class="md_line">如果你长期关注我，你会发现我有一个非常明显的学习方法，这个方法的原理也会在后续的推论中强调。那就是一段时间会特别刻意地反复提起这个要学习的内容，在与每个人的交流中都说、在每篇文章中都说。去翻翻看3-4月份的三观、5月份的解释系统、8月份的跃迁，都是同样的策略。不要管别人怎么说，还是那句话，春江水暖鸭先知，看似愚蠢的策略，也只是看似而已。</span>
+</p>
+
+
+<h4 id="toc_21">2. 高级方法</h4>
+
+<p class="md_block">
+    <span class="md_line"><strong>高级的方法就是刻意训练维度感并增加思考维度。</strong>所谓的维度感，就是尝试着使用白箱视角去打开系统，常用的方法有两个：使用多层次系统解决大型问题，通过把大型问题不断细化成小问题，来进行训练，这个方法在《跃迁》第四章的控制点部分有具体案例。第二个办法是制定中长期目标并确保实现，所谓中长期，指的至少是年度目标，通过年月周日的方式进行多维度分解，来帮助自己在具体执行过程中获得对不同维度的认识。这两种方法都是属于短期不见效，但是长期训练极具竞争力的方式，切记慢就是快！</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">对于“增加思考维度”的训练，方法就非常多了，但是有一个基本原则，就是：<strong>不要评价！</strong>思维能力训练的目的并不是为了表达情感、评价是非曲直，而是逻辑。所谓逻辑，简单来说就是前后两条推理之间必须要有因果关系，而不是通过感受得到的结论。评价他人是最简单的，没有比张嘴提出善恶、美丑、曲直、长短更简单的事情了，可是，那不是思考。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">所以，增加思考维度的训练，其实是允许不同的观点、立场同时存在于自己头脑中，自己只是客观描述，而不做价值判断的一种训练方式。因此，可以选择多跟高于自己的人交流、听到不同的观点、不断降低获得信息的重叠度等方式，来帮助自己处于冲突的观点中，而不是因为自己知道某一个观点就要显摆，遇到不同观点冲突导致认知紧张就要随便给出自己的立场。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">刻意练习，就是一种有目的的训练，上面的方法可以多尝试、多验证，有一天（之后）突然通过一个拐点，获得一种打通感，就会有一个全新世界为你打开。</span>
+</p>
+
+
+<h2 id="toc_22">五、系统思维的一些推论</h2>
+
+<p class="md_block">
+    <span class="md_line">最后，我想聊聊关于系统、系统思维的一些推论，因为我平时关注个人的有效成长，所以，推论主要都是集中在这个领域中的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">Point 1：世界是个复杂系统，千万不要用单因果、线性思维去思考世界，比如说问题出现的原因“不就是”某某某某，这种句式会把你深深锁死在幼稚和无能之中。问题因果关系不明确、不清晰、不直接，这就是绝大多数问题的现实，更多使用自组织系统的4个启发来理解世界，会让自己看得更清楚。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">Point 2：系统内生动力会让自己呈现递弱代偿的状态，我们会努力想要“做多”来解决问题（比如某一个文件夹很常用，但是层次很深，每次打开很麻烦，这个问题的解决方案，绝大多数人是希望在桌面上增加一个快捷方式，这就是做多）。做多是一个深坑，繁花似锦的深坑，越做多越可怕，我写过文章，可以移步去查看<a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485867&idx=1&sn=d9e6aff3f4128c60c7a58afe1bad8d07">《为什么“做多”是一件高概率错误的事情》</a>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">Point 3：做事情要先思考、再抓重点。很多人做事情首先考虑是自己有没有资源，然后就开始做，但是，在自组织系统的角度来看，首先必须找到系统的结构，然后根据结构找到可以以一带多的重点/抓手，把所有力量聚焦在抓手上，可以做少得多。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">Point 4：标准&gt;数量、质量&gt;范围。这个推论稍微有点复杂：如果用白箱视角来看待系统的话，你可以一层层地把系统打开；如果你要做到“边界之外、平面之上”，要每次做事都要在能力边界之外多做一点。根据这两条假设，你会得到这样的结论：做事情要将范围缩小到自己能力范围，尽可能把标准提升，把白箱层次做深，因为越是具有深层次的白箱视角，越能理解系统的结构，而对结构的理解和把握能力是可以迁移的，可以迁移到其他系统的建设上。这条的结论是：做事情要做少、但是要提高标准，少就是多，你设定的标准决定着你的人生。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">Point 5：尽可能干掉自己的傲慢。杀死我们的永远不是弱小和无知，而是傲慢，你在一条无限长的直线上，在任何一点你看向两边，都是正无穷和负无穷，也就是说，无论你多厉害或者多悲催，总有比你牛逼到要死的人和蠢得要死的人（这个隐喻来自Scalers）。这说明一定要去掉鄙视，从鄙视链中解脱出来。站在系统的角度来看，我们每个人都被压缩在三维空间里，但是你并不知道别人的思维是几维的，很有可能对方是高维的，但是投射到三维空间就会显得非常蠢，你千万不要笑话或者看不起对方，越是懂系统，越能明白不要鄙视的重要性。送你一个成语：大智若愚，你如果笑话了那些看上去愚的人，却有一天被碾压了怎么办？还不如扎实做好自己的事情。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">Point 6：耐心等待一记好球。既然我们的世界是复杂系统，那就很有可能出现这样的结果：一个输入之后，输出要很久之后才会产生，也就是所谓的延时反馈。那么，你要充分寻找自组织系统的自适应规则，也就是复杂背后极简的规律，做几个关键的长周期的行动，耐心等待系统的改变。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">还有很多推论，随着你对系统的理解越深，就会越清晰地知道系统的价值，我们在未来看吧。</span>
+</p>
+
+
+<h2 id="toc_23">六、结语</h2>
+
+<p class="md_block">
+    <span class="md_line">系统思维的简介终于完成了，这么长篇的内容但真的只是简介。还有很多案例、参考资料等等的内容，我会逐步更新到网站上的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果你对系统极其感兴趣，我很希望你能够用系统思维取得成果之后，跟我联系，告诉我你的成果，我们可以彼此交换自己的系统，来得到更大范围的体系~希望，在未来能够因为系统和你成为一生的好友！</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">本系列文章也发布在公众号上，可以移步查看每一篇的相关留言：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&amp;mid=2247485921&amp;idx=1&amp;sn=920e14e318b5ac893be4577409ec36be">《系统思维是什么-01？》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&amp;mid=2247485925&amp;idx=1&amp;sn=7f7e38b7da187737823ff60014434659">《系统思维是什么-02？》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&amp;mid=2247485929&amp;idx=1&amp;sn=2ceee138c97988dc9a5aa6aa998de365">《系统思维是什么-03？》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485809&idx=1&sn=39a708fb5ee4fbadae46d50ead7cdeec">《为什么有的问题就是解决不了》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485827&idx=1&sn=28daae77da86d0d17704a59898da48a9">《问题的唯一原因，用三层系统给出解释》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485867&idx=1&sn=d9e6aff3f4128c60c7a58afe1bad8d07">《为什么“做多”是一件高概率错误的事情》</a>
+</li>
+</ul>
+
+<hr>
+
+<h4 id="toc_24">ChangeLog</h4>
+
+<ul>
+<li class="md_li">2017年09月01日 完成文章的全部更新 by 易仁永澄
+</li>
+<li class="md_li">2017年08月30日 新增“系统思维及两种视角”、“系统定义、三要素和分类”by 易仁永澄
+</li>
+</ul></div>
+
+
+</div>
+
+
+<div class=" pure-u-0-24 pure-u-sm-0-24 pure-u-md-6-24 pure-u-lg-1-5 pure_cell">
+
+
+<link href="../../fb_static/api/html/auto_toc/auto_toc.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+
+
+
+
+<style type="text/css">.doc_toc_container.affix{ top: 20px }</style>
+
+<div class="doc_toc">
+  <div class="doc_toc_container">
+    <div class="nav"><ul>
+<li>
+<a href="system.html#toc_0">系统思维</a>
+<ul>
+<li>
+<a href="system.html#toc_1">〇、引言</a>
+</li>
+<li>
+<a href="system.html#toc_2">一、系统思维及两种视角</a>
+<ul>
+<li>
+<a href="system.html#toc_3">（一）系统思维三大要素</a>
+</li>
+<li>
+<a href="system.html#toc_4">（二）观察系统的两种视角</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="system.html#toc_5">二、系统的定义、三元素和分类</a>
+<ul>
+<li>
+<a href="system.html#toc_6">（一）系统的定义</a>
+</li>
+<li>
+<a href="system.html#toc_7">（二）系统的三要素</a>
+</li>
+<li>
+<a href="system.html#toc_8">（三）系统的两种分类方式</a>
+<ul>
+<li>
+<a href="system.html#toc_9">1. 简单系统和复杂系统</a>
+</li>
+<li>
+<a href="system.html#toc_10">2. 他组织和自组织系统</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="system.html#toc_11">三、系统思维的价值</a>
+<ul>
+<li>
+<a href="system.html#toc_12">（一）理解</a>
+</li>
+<li>
+<a href="system.html#toc_13">（二）判断</a>
+</li>
+<li>
+<a href="system.html#toc_14">（三）决策</a>
+</li>
+<li>
+<a href="system.html#toc_15">（四）改变</a>
+</li>
+<li>
+<a href="system.html#toc_16">（五）小结</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="system.html#toc_17">四、如何可以训练系统思维</a>
+<ul>
+<li>
+<a href="system.html#toc_18">（一）维度</a>
+</li>
+<li>
+<a href="system.html#toc_19">（二）两种方法</a>
+<ul>
+<li>
+<a href="system.html#toc_20">1. 基础方法</a>
+</li>
+<li>
+<a href="system.html#toc_21">2. 高级方法</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="system.html#toc_22">五、系统思维的一些推论</a>
+</li>
+<li>
+<a href="system.html#toc_23">六、结语</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="system.html#toc_24">ChangeLog</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/affix.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/scrollspy.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/api/html/auto_toc/auto_toc.js@version=0.0811"></script>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+<div class="sidebar_clicker click_to_close_sidebar"><span class="bar"></span>
+
+</div>
+
+
+
+
+
+
+
+<style type="text/css">.sidebar {
+    left: 0px;
+    right: auto;
+    border-right: 1px solid #eee;
+
+    width: 250px;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background: #fafafa;
+}
+
+
+
+</style>
+
+
+<script type="text/javascript" src="../../fb_static/api/html/auto_sidebar.js@version=0.0811"></script>
+<link href="../../fb_static/api/html/auto_sidebar.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+<script>run_sidebar("left", 'sidebar', 250, "show");
+</script>
+
+    <script>$(document).ready(function(){
+    var sidebar = $('.index_body'); var current = $('.index_body .active');
+    if (sidebar.length && current.length){ sidebar.scrollTop(current.offset().top - sidebar.height()/2 + 100);}
+})
+</script>
+  </body>
+
+</html>

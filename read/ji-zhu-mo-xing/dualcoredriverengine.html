@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <head>
+<script type="text/javascript" src="../../fb_static/lib/jquery.js@version=0.0811"></script>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>双核自驱引擎</title>
+
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta name="renderer" content="webkit">
+
+<link href="../../fb_static/lib/pure.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/pure_patch.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/markdown/basic.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../template/style.scss@app=wiki%252Ffit.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">body {margin-left: 250px}
+.index {width: 250px}
+
+</style>
+  </head>
+
+  <body>
+
+
+    <div class="sidebar">
+      <div class="sidebar_body">
+        <div class="index">
+          <ul class="index_body">
+            <li class="title"><a href="../../index.html">易仁永澄的模型库</a>
+
+            </li>
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>1</b> 思维方式</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../si-wei-fang-shi/value.html"  title="价值思维"  class="link_in_site"><b>1.1</b> 价值思维</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../si-wei-fang-shi/system.html"  title="系统思维"  class="link_in_site"><b>1.2</b> 系统思维</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>2</b> 框架模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/goldencircle.html"  title="黄金思维圈"  class="link_in_site"><b>2.1</b> 黄金思维圈</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/zhexue.html"  title="哲学+问题"  class="link_in_site"><b>2.2</b> 哲学+问题</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/cip.html"  title="CIP：认知信息加工理论"  class="link_in_site"><b>2.3</b> CIP：认知信息加工理论</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/nl6l.html"  title="理解层次"  class="link_in_site"><b>2.4</b> 理解层次</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>3</b> 技术模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="tmbrt.html"  title="TMBRT-甜面包热汤模型"  class="link_in_site"><b>3.1</b> TMBRT-甜面包热汤模型</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item active" >
+
+<a href="dualcoredriverengine.html"  title="双核自驱引擎"  class="link_in_site"><b>3.2</b> 双核自驱引擎</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>4</b> 永澄暗箱</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../yong-cheng-an-xiang/pgossystemdynamicanalysis.html"  title="“个人成长操作系统”系统动力分析原理"  class="link_in_site"><b>4.1</b> “个人成长操作系统”系统动力分析原理</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+<div id="search_bar">
+
+
+  <input id="search_posts_keywords" placeholder="Search"  type="text" value="" />
+
+</div>
+
+
+
+<script>var search_base_url = "/";
+var search_under = "";
+$(document).ready(function() {
+    var search_posts_dom = $('#search_posts_keywords');
+    search_posts_dom.val("");
+
+    if (location.search.indexOf('?s=') === 0 && search_posts_dom.length) {
+          var old_keywords = search_posts_dom.val();
+          search_posts_dom.focus().val(old_keywords);
+    }
+    var search_posts = function(){
+        var keywords = search_posts_dom.val();
+        var url_to_jump = location.protocol + '//' + location.host + search_base_url + '?s=' + keywords;
+        if (search_under){ url_to_jump += "&under="+search_under}
+        location.href = url_to_jump;
+        return false
+    };
+
+    search_posts_dom.keyup(function(event) {
+          if (event.which === 13) {
+            search_posts()
+          }
+          return false;
+    });
+
+    $('.search_in_html_button').click(search_posts);
+})
+</script>
+
+
+
+
+
+    <div class="content">
+      <div class="content_body">
+        <h2 class="post_title">双核自驱引擎</h2>
+
+
+
+
+<div class="pure-g">
+
+
+
+<div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure-u-lg-4-5 pure_cell">
+
+
+        <div class="post_body markdown"><h2 id="toc_1">〇、引言</h2>
+
+<p class="md_block">
+    <span class="md_line">为降低阅读难度，我将本文的结论前置：</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/DCDE-1.jpg" alt="" title="" ></span>
+</p>
+
+
+<ul>
+<li class="md_li">在个人成长领域中浸淫多年，形成了我的使命：<strong>引领职场青年持续高效能成长</strong>。我认为只有持续和高效能，才不辜负自己的投入和努力，我不想要低效、自嗨、效能很差的成长。
+</li>
+<li class="md_li">持续高效能成长，是用系统化的手段来实现的，这个系统的名字叫：<strong>个人成长操作系统</strong>。
+</li>
+<li class="md_li">我自己的成长系统，用了将近十年才成型，包含着认知系统、方法论系统、工具系统，如果要教给小伙伴们，讲授成本会很高的。
+</li>
+<li class="md_li">解决这个问题的方式，我采用的是：最小化思维（最小模型、最小行动）和系统思维（从复杂系统中找到关键抓手），去寻找系统中的MVP。
+</li>
+<li class="md_li">这个MVP不仅是最小可实现的，更重要的是，一旦拥有了这个MVP，整个个人成长操作系统就可以自动地生长，再也不用费力去一点点构建了。
+</li>
+<li class="md_li">这个MVP是由两部分构成的，分别是：项目化任务推进方法论（简称“项目化”）和知识创造方法论（简称“知识创造”）两大方法论构成的，我将两者命名为：<strong>双核自驱引擎</strong>。
+</li>
+<li class="md_li">本文我会通过引子 + 黄金思维圈的结构来进行构建，分析双核自驱引擎的原理。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">另外，我还写了一篇对本文的逻辑说明文章，请参考：<a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247486247&idx=1&sn=75a05417e7a767e88bb4b3dd61a0fc75&chksm=e927a37ede502a6858771bc034e2c4dc023fb5c652e64d9579434b068194248ee51e2f49f6b7#rd">《《为什么双核自驱引擎对于持续高效能成长来说是最重要的抓手？》》</a></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">所以，本文是我对“系统化成长”的解释系统的全面展示，如果你希望掌握“系统化成长”的原理框架，我相信本文一定会对你有极高价值。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">另外，如果你信任我，我强烈建议你能够遵循“必要难度”的基本原理，用自己最高标准来对本文进行学习，构建起一个系统性成长的框架体系。甚至，我可以很有自信地说，<strong>如果不能透彻理解原理逻辑，在未来的成长、发展、改进、提升中，你将很有可能付出更多边际成本。</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">我建议无论是用脑图、幕布、A4纸结构图还是流程图，你尽可能把本文的定义、概念、原理、推论逻辑整理下来。请“做自己的CEO”的参与者必须用最高标准完成文章阅读。</span>
+</p>
+
+
+<h2 id="toc_2">一、背景：做“多”带来的高概率的错误</h2>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">在信息爆炸的今天，你会发现：</span>
+</p>
+
+
+<ul>
+<li class="md_li">身边那个混吃等死的小王，突然之间咸鱼翻身，整个人变了个样；
+</li>
+<li class="md_li">有太多太多的知识自己连听都没听说过；
+</li>
+<li class="md_li">自己曾经可以赖以生存的技术仿佛立刻过时，甚至被新来者随意超越；
+</li>
+<li class="md_li">看似稳定的环境，却成为产生最大系统风险的来源；
+</li>
+<li class="md_li">想要开始提升自己，却发现自己仿佛进入了知识的汪洋大海，不知所措；
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">随着这些痛点的持续积累，在2014年下半年到2016年，中国大地上掀起了一阵学习高潮：很多人都在把自己的经验拿出来变现，还用营销话术告诉你，如果不学他的东西，你就麻烦了；越来越多的人都被裹挟到这场焦虑之中，大家都在拼命地多学、多做、多练，仿佛只有这样，才能为自己赢来一份在未来站立不倒的保障。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">但是，根据“递弱代偿”和“熵增”两大原理来看，“做多”是高概率的错误（见：<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485867&idx=1&sn=d9e6aff3f4128c60c7a58afe1bad8d07">《为什么“做多”是高概率错误？》</a>），想想看，囤书、囤课除了给自己带来焦虑（详解：<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247484637&idx=1&sn=78d00f46f511c9007f9d72053858eb25">《简单方法彻底解决囤课、囤书不看的焦虑症》</a>），难道真的能让自己快速成长么？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">同时，根据“正态分布”原理，如果有更多的人这样做，说明这个策略是任何人都可以用的，那么，这个策略必然趋向于平庸，收益也必然趋向平庸。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">什么是<strong>平庸的收益</strong>？通常指的是线性收益，也就是投入和产出是正比例关系的，一份投入、一份产出，十份投入、十份产出，这就是平庸的，因为，你在开始的时候就可以一眼看到家了。我总是说，我这一生注定是平凡人、普通人，但是，我不愿意成为一个平庸的人，我希望用更好的耐心，去博一个更大的收益，一个非线性的收益。那么，为了非线性收益一定要考虑用少数人才能用的策略。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">其实，早就有高手想明白了这个道理，进入2017年之后，他们纷纷出手了：比如成甲老师出版的《好好学习：个人知识管理精进指南》、古典老师出版的《跃迁：成为高手的技术》，还有一些全新的思想书籍《必然》、《爆裂》等，都给出了明确的信号：<strong>只有考虑“彻底放弃做多，选择做少”这样反直觉的体系化的策略，才能提高非线性收益的可能</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">总结一下，在外部时代的整体改变下，我们越来越要考虑如何<strong>做少得多</strong>（见<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485521&idx=1&sn=c6f6dff29b0ee86df6c2caf7664fcea9">《如何用极简的方式面对复杂的持续成长过程？》</a>）的策略，这是整个思考的出发点。我想要找到：<strong>那个“少”是什么，为什么就是这个，以及如何用这个少来解决各类问题</strong>。</span>
+</p>
+
+
+<h2 id="toc_3">二、Why：使用“做少得多”策略的原因</h2>
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">“为什么一定要让自己成长、提升、进步、发展呢？为什么不能充分享受生活呢？那样的生活多累啊，为什么要为难自己呢？”</span>
+</p>
+
+</blockquote>
+
+<p class="md_block">
+    <span class="md_line">我总是遇到这样的“基于粗糙假设”的问题。秋叶大叔在推送<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzMTUyOTY3NA==&mid=2247486885&idx=1&sn=bf31610a0f925da76be0fe5542657904">《一张图教你看懂热爱工作的真相》</a>中说了一堆金句，其中对于这个问题也有解释：“成年人只谈责任，小孩子才天天谈我喜欢还是不喜欢”、“遇到你喜欢的工作，是幸运，遇不到你喜欢的工作，是常态”，现实就是如秋叶大叔所说的样子。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">对于这个问题，有一个更简单的解释：人生大约由两个部分构成：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>生活部分</strong>。享受人生、享受生命、彰显天性、肆意生活、说走就走、环游世界、我在家也是公主为什么要听你的、不要委屈自己……对，在生活部分中，你是天、你是地、你是神、是闪着金光的SuperStar，爱怎么生活就怎么生活。
+</li>
+<li class="md_li"><strong>竞争部分</strong>。吃穿住用行，跟那些水平和自己相近的人去攀比/鄙视，升值加薪防被辞，攒钱买自己梦想中的小物件、中物件、大物件，选个好女婿/媳妇，生个孩子有好的教育不输在起跑线，被领导和同事看得起……这个领域中所需要的不仅仅是责任，更重要的是能够承担责任的能力。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">如果你只是在“生活部分”，那真的没有必要为难自己，就可以不要过得那么累。那问题来了：“我能不能只有生活部分，不要竞争部分呢？”</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">当然可以啦，但是要做好几个准备：</span>
+</p>
+
+
+<ul>
+<li class="md_li">有充分的准备和基础，支持你的生活的任性。
+</li>
+<li class="md_li">持续防范黑天鹅事件出现，将你原有的准备彻底干掉，彻底改变了你的生活基础，那个时候不上不下的很郁闷的。其实，都不需要黑天鹅事件，家人生病、换套房子、孩子长大教育费用上涨、行业变化这种不是天灾人祸的事情都可以把一个“稳定的”幸福瞬间干趴下。一定要记得：只有让自己充分拥抱不确定性才能应对不确定性。
+</li>
+<li class="md_li">或者，你把自己的预期大幅度降低，无欲无求也就变得无欲则刚。可以看看那些虔诚的信徒，信念就可以让他们从竞争部分中解脱出来。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">正如秋叶大叔说的：“遇到你喜欢的工作，是幸运，遇不到喜欢的工作，是常态”一样，必须长久地生存在竞争中，想想看马云、马化腾难道不比你有钱么，但是，他们不是更投身在更激励的竞争中么？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果你可以接受自己必然也将长期必然处于竞争环境中，那就应该知道：既然处于竞争环境，必须要让自己变得更好才行，否则怎么可能竞争呢？</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">既然要变得更好，那么，“变好”的本质就是价值变化，这样，就可以用价值变化原理来理解这个问题了。<strong>价值变化有三种状态：价值积累、交换、变现</strong>：</span>
+</p>
+
+
+<ul>
+<li class="md_li">我们只有做好价值积累，才可以为其他人/组织提供使用价值，才会被其他人重视；
+</li>
+<li class="md_li">我们只有认真思考、提前规划价值交换和价值变现的方式，才可能谋得非线性收益
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">（关于价值公式、价值思维、价值变化原理、价值和个人成长的关系的描述，请详见《价值思维》系列文章）<br /></span>
+    <span class="md_line">来对这个部分做一下总结。既然在全新的环境状态下，我们要考虑“做少得多”，那么，结合黄金思维圈和这个部分的讨论，可以得到这样的结论：<strong>我们要用“做少得多”这个策略的目的是为了让价值更好地变化，以帮助我们在竞争领域中胜出</strong>。</span>
+</p>
+
+
+<h2 id="toc_4">三、How：如何才能实现价值高效变化呢？</h2>
+
+<p class="md_block">
+    <span class="md_line">意义的部分说完了，该说How了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">我先把答案给出来，How的答案就是成长。<strong>个人成长的定义是从价值现状到价值目标的过程，如果你认定某一个事情是有价值的，让自己不断达到那个价值目标，本身就是成长了</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">很多人认为成长就是机械的、乏味的、无趣的，这依然是粗糙的假设，只是为了让自己放弃成长责任的一种自我欺骗罢了。<strong>成长，就是要满足自己的需求，需求满足了，成长就会随着到来。</strong>想想看，如果你期待自己的身体健康、精力充足，可以把控自己的时间和空间，可以对自己有所规划和管理，有情绪的时候不被干扰、能够不断实现梦想，处理自我内在的混乱和外部的冲突，可以让能力持续增长、不断积累知识、扩张认知边界，能够解决复杂问题、完成大型项目、事业风生水起，能够升职加薪、有业外收入，物质得到满足，影响力、成就感都在大幅度提升，此外家庭温馨、家庭和谐……</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">当然，上述期待不可能一次都实现，但是，每一个需求的满足，我们自然会认为自己成长了，难道，这种成长机械么？乏味么？无趣么？</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">既然，成长就是最重要的手段（How），那我们就去成长就好了，多简单啊？可是，普通的成长者遇到了两大问题：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>断续</strong>。能量好了就成长一阵儿、状态差了就会卡死在原地，怎么就没有年轻时候那种十足的冲劲让自己一直跑下去呢？
+</li>
+<li class="md_li"><strong>低效</strong>。怀抱着粗糙的假设，认定简单的因果一一对应，只是用感性在决策，对成长方法定价错误，持续低水平地勤奋。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">当然，这两大问题不见得怪你，真正的原因来自于自己能力跟不上自己成长的速度。根据爬楼隐喻（详见<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485469&idx=1&sn=16387f1a4e039b35e517a6ab6e9ddc0b">《到底什么才是低水平的勤奋？》</a>），你明明已经完成升级了，但是还在原地打转，用着原有的方式过着升级以后的生活，形成了强烈的路径依赖，自然不适应了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">就拿写作举例子吧。当你是小白的时候，最重要的是让自己开始写起来；如果你已经拥有了书写的能力，还是只是沉醉于每周可以完成一篇文章，那不就是低水平勤奋了么？你进化了，手段就要随着改进，否则会浪费自己的时间、天赋和人生，成长也不会稳定高效。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">问题来了：<strong>要学习新的知识、还要持续行动，要让成长持续、还要让自己的方法升级，要不断积累价值、还要想清楚价值交换和变现的方式，这难道不是做“多”么</strong>？</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">这确实是做多，我们来分析一下上述内容的共同点：</span>
+</p>
+
+
+<ul>
+<li class="md_li">学新知识、持续行动；
+</li>
+<li class="md_li">持续去往价值目标，需要分析价值、然后行动；
+</li>
+<li class="md_li">升级方法，需要学习；
+</li>
+<li class="md_li">积累价值，本质也是分析价值，持续行动；
+</li>
+<li class="md_li">思考规划价值交换和变现的方式，需要学习、需要行动。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">总的来说，具体方法都指向了：学习和行动。也就是说：如果期待让价值更好地发生变化，就要不断地学习、行动，让自己获得成长才行，这就是总的策略，也就是How的具体答案，是做少的具体实施方案。</span>
+</p>
+
+
+<h2 id="toc_5">四、What：我们究竟要怎么做呢？</h2>
+
+<p class="md_block">
+    <span class="md_line">上文总结说：“具体方法都指向了：<strong>学习和行动</strong>。也就是说：如果期待让价值更好地发生变化，就要不断地学习、行动，让自己获得成长才行，这就是总的策略，也就是How的具体答案，是做少的具体实施方案。”</span>
+</p>
+
+
+<h3 id="toc_6">（一）成果导向思维</h3>
+
+<p class="md_block">
+    <span class="md_line">只是得到这样的结论，你肯定不满意，因为谁都知道学习很重要、行动很重要，但是究竟要做成什么样、达到什么标准呢？也就是黄金思维圈的最后一个问题What，究竟要如何分析呢？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">想想看，既要在每个人都知道的学习、行动的范围内思考，又要超越这个范围给出“少就是多”的策略，面对这个问题，必须采用升维的方式，拉高高度来找到解决方案。根据三层系统的原理（详见：<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485827&idx=1&sn=28daae77da86d0d17704a59898da48a9">《问题的唯一原因，用三层系统给出解释》</a>），面对这个问题，至少要通过增加一个全新的视角才能解决，这个视角就是：<strong>万物互联的时代</strong>。（详见：<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485813&idx=1&sn=007d9e68f586918e45c40aef621ef830">《万物互联是如何通过系统来影响我们的成长的？》</a>）</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">万物互联让每个人和更多人、物、信息产生联系，<strong>将每个个体卷入大规模陌生人协作网络中去</strong>。越来越多的人不仅在自己的组织里工作，还为其他各类兴趣、学习组织效力，甚至你都没有见过他们。而连接改变了原有系统的结构和关系，你不再只是某一个小组织内信息孤岛中的存在，你被越来越多的陌生人所接触，这就叫卷入大规模陌生人协作网络中。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">“和陌生人的协作”与原来的“和熟人协作”有什么区别呢？答案是：<strong>定价策略变化了</strong>。熟人是靠关系来定价的，我们天天在一起，形成了良好的关系，所以，就着情面，没有功劳也有苦劳，无意中会提高定价。但是，陌生人并不买账：现在的人普遍没有时间、没有注意力，谁也没有时间像原来那样慢慢地听你陈述自己有多厉害、多适合这件事，<strong>判断一个人适不适合协作的方式从靠时间的积累（耐心倾听）变成了“模式的快速”识别</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>什么样的模式可以被他人快速识别呢？答案如下：抽象来说叫使用价值，具体点就是成果。</strong>如果你期待和他人协作，只要把自己的成果扔出来，协作者就会很容易识别。想想看，你喊着说自己运营很厉害和你给出一个自己曾经运营操盘的项目，这是绝对不同的，这个道理很简单，写过简历的人都明白。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">说到这里，可以给出“What”部分分析的答案了，那就是：<strong>基于成果导向（产出）的学习和成长</strong>。</span>
+</p>
+
+
+<h3 id="toc_7">（二）方法思维和继承思维</h3>
+
+<p class="md_block">
+    <span class="md_line">感觉还是有点虚啊，能不能再实在点？什么叫产出成果啊？产出什么成果可以让自己更好地提升价值呢？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">继续增加维度，在成果导向的基础上再填上两个思想：<strong>一个叫做方法思维，另一个叫继承思维</strong>。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line"><strong>先看方法思维。</strong>“方法”一词，来自于药方+吃药的法子，药方指代主观世界，法子指代客观世界，组合在一起的“方法”就是理论和实践相结合。进一步来说，就是：学习的重点是形成认识世界、改造世界的理论、实践的重点也是要验证和优化理论。把方法思维和成果思维结合到一起，可以得到下面的推论：</span>
+</p>
+
+
+<ul>
+<li class="md_li">所有“用于投资和生产的时间”的使用，要尽可能用他人已经形成的高级方法来支撑，这样可以减少自己的无谓试错；
+</li>
+<li class="md_li">同时，要一边实践一边将高级方法写入自己的表征体系中（只有实践，才能把认知变成表征）；
+</li>
+<li class="md_li">实践的导向方式是成果导向，用成果导向来优化方法，就必须生成三种成果：项目支撑成果、目标成果和知识成果。（详见：<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485914&idx=1&sn=cf1aa2b2c46ad87445eeb6ef06daf54d">《每个人都可以快速上手的最小策略是什么？》</a>）
+</li>
+<li class="md_li">既是高级方法、还能支持成果产生、还能自我优化的选项早已经摆在那了，它的名字叫：项目管理。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">我们要做很多任务，有的任务是玩、有的是生存、有的是促进价值变化，而<strong>那些促进价值变化的任务恰好就是把时间用来投资和生产的任务，我们将这些任务称为价值任务</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">说到这里，第一个自驱引擎出现了：很多人做事没有个基本套路，而根据方法思维，<strong>我们要把所有价值任务，都转化成项目，再用已经成熟的项目管理的方法去执行，这个过程就叫做项目化，而整个方法叫做：项目化任务推进方法。</strong>用这种方法，可以让“时间投入”的投资收益率最高，因为，项目管理方法是全人类在项目处理领域的经验集，可能你要试的错，早就有人做过了并给出正确的方法，那咱们就没有必要再来一遍了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>再来看继承思维</strong>，这种思维方式来自于计算机领域，常见的词有库（lib）、模板（temp）、类（class），我们可以将这些词统称为母版/母体（就像PPT里面有母版编辑，就是这个意思）。而母体可以生成实例，实例包含着母体所有的特性，这就是继承思维。比如说月饼模子，就是母体，一个个的月饼就是实例。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">继承思维的重要原理在于：<strong>你必须要在模子上努力，这样才能让自己的未来越来越好。</strong>道理很简单，你改变模子，不会改变已经生成的月饼的样子，但是可以让未来的月饼变成你想要的样子。再配上成果导向的思维：三大成果中的“知识成果”生产，就是在月饼模子上努力的具体做法，而如果要生成知识成果，那套方法论的全称是：知识创造方法论。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ol">
+    <span class="md_line">知识创造有其具体的步骤：</span>
+</p>
+
+
+<ol>
+<li class="md_li">知识萃取，把隐形、暗默的经验萃取成概念和显性化的方法；
+</li>
+<li class="md_li">知识结构化，将碎片的知识按照一定规则形成结构体系；
+</li>
+<li class="md_li">知识成果生产，将知识主题生产成知识作品。
+</li>
+</ol>
+
+<p class="md_block">
+    <span class="md_line">总结一下，在成果导向思维、方法思维、继承思维下，终于可以得到关于What的结论：<strong>通过项目化的方式去推进任务，过程中采用知识创造的方法，不断生成出支撑自己价值变化的成果</strong>。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">总结本系列写到这里的逻辑：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>背景</strong>：万物互联带来了关系和结构变化，很多人因为焦虑而选择“做多”，深陷“果上努力”的低水平勤奋。
+</li>
+<li class="md_li"><strong>Why</strong>：因为竞争部分的存在，必须要考虑优化价值变化过程，即：提高价值积累效率，规划价值变化，让价值变现能够更好地实现非线性收益。
+</li>
+<li class="md_li"><strong>How</strong>：实现Why的手段，是持续高效能的个人成长，一个心智开启的人必须要考虑和低效的方法斗争，要考虑用“做少得多”的策略、用系统化的方式去完成，这个方案叫“个人成长操作系统”。
+</li>
+<li class="md_li"><strong>What</strong>：经过推导，实现How的具体做法是：使用项目化和知识创造的双核引擎不断产出知识成果。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">再把开篇的图贴上来：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/DCDE-1.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">至此，构成个人成长操作系统的MVP的两个系统已经分析完成，项目化和知识创造就像一辆汽车的发动机，所以，这两个方法论凑在一起是双核引擎。<strong>那么，“双核自驱引擎”中的自驱是什么意思呢</strong>？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>自驱 = 自生长</strong>，这是我自己的定义。也就是说，<strong>如果你的系统内安装了“双驱引擎”，它就可以自行驱动自己生长出一个完整的“个人成长操作系统”。</strong>再直白点说：当学会了这两个核心，就可以启动“持续”成长了。我来继续分析背后的逻辑。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">2013年年初，我首次开设“个人成长私人导师班”活动，之后于2014年将其改名为：“做自己的CEO”。这个活动的核心就是将我在系统化上的积累传授给学员，帮助学员建立“个人成长操作系统”（2016年前，这个系统叫：自我管理系统，2017年后更名）。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">到2016年，“做自己的CEO”活动进入到第七期，我发现我的实践很有问题：每次给大家讲解的内容，已经动用了我的全部能力了，但是，只有为数不多（每次不超过15%）的人搭建了自己的体系。对我来说，这是个不足，因为我的初心是希望大家跟我在一起，能够学到我的高效成长方法，可是，这个期待没有实现，这就是个不足。遇到不足必须反思，我分析了原因——我的讲授方式有问题。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">整个“个人成长操作系统”的结构大约是这样的：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>按照维度来划分</strong>：系统可以分为：①认知系统，用来判断价值、分析价值、规划价值发展方法；②方法论系统，包括各种管理方法，比如目标管理、成果管理、能力管理、任务管理、情绪和问题管理、认知管理等；③工具系统，如何优化工具以提高方法效率，而不是“为了工具而工具”，从“控工具”的状态沦陷为“工具控”。
+</li>
+<li class="md_li"><strong>按照价值来划分</strong>：对于价值变现，要有认知管理、价值管理，这样可以为自己更好地规划非线性成长的可能；对于价值交换来说，涉及到成果管理、人脉管理；对于价值积累来说，要考虑积累效率，必须用更高级的方法论、更好的方法，严防“果上努力”：比如花大时间学时间管理，就不如去澄清生涯方向、处理内部耗损、分析目标和提升能力；比如成天想着搞好知识管理、弄清楚文件夹分类，就不如投身在成果管理和价值交换上，切记要在关键原因上努力。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">这么复杂的体系，我原有的传授方式是模块化地进行，把整个体系分成了5-6个模块，一个个模块给大家讲解，然后再把模块整合成一个体系。现在来判断这个逻辑，我认为犯了两个巨大的错误：①<strong>忽视了基础的差别</strong>：我已经在这个领域里积累了将近十年，拥有非常丰富和深度的心理表征，对我来说很简单的事情，对大家来说可不见得理所当然，我可以同时将若干模块分开学习再最终整合，但是大家学一个模块就会感觉很辛苦。所以，我的假设面对现实的时候，才发现自己是多么粗糙。②<strong>果上努力，忽视系统性</strong>：即便大家可以接受子模块学习，也不见得可以合并在一起，因为复杂系统并不可以简单地划分。复杂系统是一个生态，它是根据一定原理生长出来的，而不是拼接出来的，如果按照模块学习再组合，那就是非常典型的第一印象思路、平庸思路、线性关系的思路。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">基于这个分析，我给出了一个<strong>全新的“个人成长操作系统”构建思路——摊大饼</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/DCDE-2.png" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">如上图所示。全新思路的产生，是基于我的决策原则的，而不是拍脑门，因此，稳定性大幅度提高。具体解释：</span>
+</p>
+
+
+<ul>
+<li class="md_li">将两个核心的关键部分拆开，放在学习过程的首位；
+</li>
+<li class="md_li">当理解了成果和卡片之后，然后将成果产生方法用&quot;项目化&quot;来优化，这样就会更稳定地产出成果了；
+</li>
+<li class="md_li">反思方法、情绪处理方法、问题管理方法、学习方法、目标管理方法……不管什么方法，那都是知识成果。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">明白了么？<strong>只要是知识成果，就可以用被项目化武装过的知识创造方法来生成，如果，项目化和知识创造这个双核引擎已经建立好了的话，剩下的事情，就自行生长就可以了！</strong>（忽然想到，“做自己的CEO”社群的学习材料科学的中良说：核这个字还是要有，从材料学角度来说，有了核之后，晶粒会依附在核上快速生长。）这就是自驱、自生长的概念。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">到这里，我们的双核自驱引擎就全面论证完成。</span>
+</p>
+
+
+<h2 id="toc_8">五、为什么该系统可以自生长？</h2>
+
+<p class="md_block">
+    <span class="md_line">站在理论的角度来看：理论通了、实践也就通了，理论和实践是共通的、是一件事。但是，站在实践的角度来看，理论推演过程再符合逻辑、再能够跑通，但是到实践中也是两件事：一点点细节的差别，就会导致两者之间的天壤之别。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">本系列文章的所有论述都是理论上的推导，所以，我清醒地知道：即便逻辑再完美、假设再明确可验证，也不见得在实践中可以和我想得一样有效。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">即便如此，我至少有了理论体系做依据、至少相信自己的逻辑推演。剩下的就是去实践，<strong>用项目化和知识创造的双驱核心系统进行具体实践，用实践来验证理论逻辑、用实践来优化理论细节。</strong>我的实践主要有两个部分：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>第一，用双核自驱引擎生产方法。</strong>①不断将双核自驱引擎的方法系统化、流程化、清单化、模板化，做为一个持续优化的优秀作品，提供给“做自己的CEO”的小伙伴们；②利用双核自驱引擎生产其他方法论，并将多个方法论组合形成产品，例如：打包积极主动方法论 + 互联网在线教育产品生产方法 + 在线团队项目运作方法，形成更新版本的分身术训练营，那这个好评分在9.8分就可以持续开展了。③如果前两者都跑通，那我这五年积累的知识产品就可以系统化地放出来了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>第二，用双核自驱引擎的模式来寻找同频伙伴。</strong>在这个时代，确实要靠模式识别了，而我要识别的就是符合“双核自驱引擎”模式的小伙伴，他们应该具备这样的特点：①拥有自我驱动能力、能够自己定义任务、协作界面良好，有效推进项目完成；②可以分辨成果、通用/专业知识，深刻践行卡片积累，将碎片进行结构化，不断提升内容影响力。两方面的能力分别对应着项目化和知识创造，我想要这样的伙伴一起玩耍。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">所以，一个符合复利的良性循环形成了：</span>
+</p>
+
+
+<ul>
+<li class="md_li">使用双核自驱引擎，让“个人成长操作系统”更符合现实的需求，在实践中发挥更大的价值，带动我自己的持续高效能成长；
+</li>
+<li class="md_li">使用双核自驱引擎，不断优化我的核心产品“做自己的CEO”，不断提高产品质量和用户满意度，来推动事业做好；
+</li>
+<li class="md_li">使用双核自驱引擎，来生产出符合本质导向的个人成长类的方法、高效教育产品生产的方法、线上团队协作的方法等各种方法，将这些方法投放给现在的团队，让团队可以运作符合“持续高效能成长”的单体产品；
+</li>
+<li class="md_li">使用双核自驱引擎，对参与单体产品的小伙伴进行模式识别，如果符合模式就将其加入团队预备团，对其进行双核自驱引擎培训，使之符合我的团队标准，来共同运作全新的单体产品，并根据项目投入和成果产生分配收益；
+</li>
+<li class="md_li">让单体产品持续生长，形成符合本质导向、符合持续高效能成长逻辑的产品体系，不断构筑我的“持续高效能”的品牌势能，并和“做自己的CEO”产品结合，推动事业体持续做好、做强、做大。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/DCDE-3.png" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line"><strong>上述逻辑就符合自生长的论证，只要有双核自驱引擎，整个体系就可以慢慢长大起来。</strong>此外，这个逻辑还可以用很多其他视角来验证：</span>
+</p>
+
+
+<ul>
+<li class="md_li">符合我的使命，这个体系可以更好地引领，更好地关注在高级成长方法上；
+</li>
+<li class="md_li">符合我的决策原则，每一次使用双核自驱引擎，就可以让它更好用，让所有的方法形成体系，边际成本会大幅度下降，而这种高维的思考方式，会得到更高级的人脉资源的认可（要知道，高手更关注思路的清晰度）；
+</li>
+<li class="md_li">符合系统思维：复杂系统背后都有极简的规律，把握规律去做事才是最高效的方式；④符合我的人生观和价值观：这是一个生生不息的过程，这是一个不断奔向真实的过程，这是可以利他助人的过程，同时，这也符合把握事物本质规律的价值取向。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line"><strong>所以，这是典型的“做少得多”</strong>，只需要在双核自驱引擎上努力就好了，剩下的就是扎实地去做事情就好了，耐心等待系统给你带来的惊喜吧。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这两件事，我已经推进将近一个月了，通过目前的实践效果来看，还是很满意的。接下来，我会用双核自驱引擎持续推进工作，做为个人成长这个复杂系统的序参量，必须等待复杂系统的延时反馈，因此，让我继续实践半年，再来给大家做一下交流，关于实践中的真实经验。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">很希望看懂本文的伙伴，能够积极主动加入到我的活动中来，来验证这个理念，来体验持续高效能的成长，我会一直等着你的到来的。（对了，这里还是给你一个找到我的方法，请把这篇文章认真阅读完成，并整理构建本文的逻辑，预计需要1个周；然后你找一个小伙伴讲解给他听，看看能否把他讲懂；之后，参加到我的各种活动里，并且推进任务、输出作品，让我能够看到你。剩下的，你就等着一起飞吧~）</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这个系列完成了，我论证了：外部环境在万物互联时代的巨大变化、对我们的改变，在新时代下如何更好地在竞争领域中表现的原理、方法和策略，以及我要做的事情。很感谢“做自己的CEO”老学员王晟为这两个系统起的名字，也希望未来有更多的伙伴能够加入到“做自己的CEO”这个群体中来，彻底摆脱低端的成长方式，用更高阶的方式为自己的成长加把劲儿。如果你想参加这个活动，请直接跟我留言即可，希望用双核自驱引擎来帮助我们不仅做到在一起、一辈子，更重要的是共同快速成长、越来越好！</span>
+</p>
+
+
+<hr>
+
+<h2 id="toc_9">ChangeLog</h2>
+
+<ul>
+<li class="md_li">2017-10-13 增加内容 by 易仁永澄
+</li>
+</ul></div>
+
+
+</div>
+
+
+<div class=" pure-u-0-24 pure-u-sm-0-24 pure-u-md-6-24 pure-u-lg-1-5 pure_cell">
+
+
+<link href="../../fb_static/api/html/auto_toc/auto_toc.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+
+
+
+
+<style type="text/css">.doc_toc_container.affix{ top: 20px }</style>
+
+<div class="doc_toc">
+  <div class="doc_toc_container">
+    <div class="nav"><ul>
+<li>
+<a href="dualcoredriverengine.html#toc_0">双核自驱引擎</a>
+<ul>
+<li>
+<a href="dualcoredriverengine.html#toc_1">〇、引言</a>
+</li>
+<li>
+<a href="dualcoredriverengine.html#toc_2">一、背景：做“多”带来的高概率的错误</a>
+</li>
+<li>
+<a href="dualcoredriverengine.html#toc_3">二、Why：使用“做少得多”策略的原因</a>
+</li>
+<li>
+<a href="dualcoredriverengine.html#toc_4">三、How：如何才能实现价值高效变化呢？</a>
+</li>
+<li>
+<a href="dualcoredriverengine.html#toc_5">四、What：我们究竟要怎么做呢？</a>
+<ul>
+<li>
+<a href="dualcoredriverengine.html#toc_6">（一）成果导向思维</a>
+</li>
+<li>
+<a href="dualcoredriverengine.html#toc_7">（二）方法思维和继承思维</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="dualcoredriverengine.html#toc_8">五、为什么该系统可以自生长？</a>
+</li>
+<li>
+<a href="dualcoredriverengine.html#toc_9">ChangeLog</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/affix.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/scrollspy.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/api/html/auto_toc/auto_toc.js@version=0.0811"></script>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+<div class="sidebar_clicker click_to_close_sidebar"><span class="bar"></span>
+
+</div>
+
+
+
+
+
+
+
+<style type="text/css">.sidebar {
+    left: 0px;
+    right: auto;
+    border-right: 1px solid #eee;
+
+    width: 250px;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background: #fafafa;
+}
+
+
+
+</style>
+
+
+<script type="text/javascript" src="../../fb_static/api/html/auto_sidebar.js@version=0.0811"></script>
+<link href="../../fb_static/api/html/auto_sidebar.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+<script>run_sidebar("left", 'sidebar', 250, "show");
+</script>
+
+    <script>$(document).ready(function(){
+    var sidebar = $('.index_body'); var current = $('.index_body .active');
+    if (sidebar.length && current.length){ sidebar.scrollTop(current.offset().top - sidebar.height()/2 + 100);}
+})
+</script>
+  </body>
+
+</html>

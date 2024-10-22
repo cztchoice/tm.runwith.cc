@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <head>
+<script type="text/javascript" src="../../fb_static/lib/jquery.js@version=0.0811"></script>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>CIP：认知信息加工理论</title>
+
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta name="renderer" content="webkit">
+
+<link href="../../fb_static/lib/pure.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/pure_patch.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/markdown/basic.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../template/style.scss@app=wiki%252Ffit.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">body {margin-left: 250px}
+.index {width: 250px}
+
+</style>
+  </head>
+
+  <body>
+
+
+    <div class="sidebar">
+      <div class="sidebar_body">
+        <div class="index">
+          <ul class="index_body">
+            <li class="title"><a href="../../index.html">易仁永澄的模型库</a>
+
+            </li>
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>1</b> 思维方式</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../si-wei-fang-shi/value.html"  title="价值思维"  class="link_in_site"><b>1.1</b> 价值思维</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../si-wei-fang-shi/system.html"  title="系统思维"  class="link_in_site"><b>1.2</b> 系统思维</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>2</b> 框架模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="goldencircle.html"  title="黄金思维圈"  class="link_in_site"><b>2.1</b> 黄金思维圈</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="zhexue.html"  title="哲学+问题"  class="link_in_site"><b>2.2</b> 哲学+问题</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item active" >
+
+<a href="cip.html"  title="CIP：认知信息加工理论"  class="link_in_site"><b>2.3</b> CIP：认知信息加工理论</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="nl6l.html"  title="理解层次"  class="link_in_site"><b>2.4</b> 理解层次</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>3</b> 技术模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../ji-zhu-mo-xing/tmbrt.html"  title="TMBRT-甜面包热汤模型"  class="link_in_site"><b>3.1</b> TMBRT-甜面包热汤模型</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../ji-zhu-mo-xing/dualcoredriverengine.html"  title="双核自驱引擎"  class="link_in_site"><b>3.2</b> 双核自驱引擎</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>4</b> 永澄暗箱</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../yong-cheng-an-xiang/pgossystemdynamicanalysis.html"  title="“个人成长操作系统”系统动力分析原理"  class="link_in_site"><b>4.1</b> “个人成长操作系统”系统动力分析原理</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+<div id="search_bar">
+
+
+  <input id="search_posts_keywords" placeholder="Search"  type="text" value="" />
+
+</div>
+
+
+
+<script>var search_base_url = "/";
+var search_under = "";
+$(document).ready(function() {
+    var search_posts_dom = $('#search_posts_keywords');
+    search_posts_dom.val("");
+
+    if (location.search.indexOf('?s=') === 0 && search_posts_dom.length) {
+          var old_keywords = search_posts_dom.val();
+          search_posts_dom.focus().val(old_keywords);
+    }
+    var search_posts = function(){
+        var keywords = search_posts_dom.val();
+        var url_to_jump = location.protocol + '//' + location.host + search_base_url + '?s=' + keywords;
+        if (search_under){ url_to_jump += "&under="+search_under}
+        location.href = url_to_jump;
+        return false
+    };
+
+    search_posts_dom.keyup(function(event) {
+          if (event.which === 13) {
+            search_posts()
+          }
+          return false;
+    });
+
+    $('.search_in_html_button').click(search_posts);
+})
+</script>
+
+
+
+
+
+    <div class="content">
+      <div class="content_body">
+        <h2 class="post_title">CIP：认知信息加工理论</h2>
+
+
+
+
+<div class="pure-g">
+
+
+
+<div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure-u-lg-4-5 pure_cell">
+
+
+        <div class="post_body markdown"><h2 id="toc_1">〇、引言</h2>
+
+<p class="md_block">
+    <span class="md_line">本文是理论性文章，主要是介绍认知信息加工模型对于个人成长的巨大价值。由于CIP模型为复合模型，需要大量基础知识做支撑，因此，文章阅读难度较高，请做好心理准备；此外，该模型为“做自己的CEO”活动中必须掌握的顶级模型，请CEO活动的参与者提高对本文的重视，并加强实践。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">本文的结构如下：</span>
+</p>
+
+
+<ul>
+<li class="md_li">CIP模型的简介
+</li>
+<li class="md_li">CIP模型的作用是什么？
+</li>
+<li class="md_li">CIP从生涯到普适
+</li>
+<li class="md_li">CIP各要素的细节说明
+</li>
+</ul>
+
+<h2 id="toc_2">一、CIP简介</h2>
+
+<p class="md_block">
+    <span class="md_line">CIP的全称为：<strong>认知信息加工理论</strong>（Cognitive Information Processing Theory），最早在上世纪90年代的《生涯发展和服务：一种认知的方法》中提出。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">cip它主要包括三个层次、四个要点：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../框架模型/_image/cip01.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">CIP模型的核心价值可以归纳为：<strong>如何做出更好的决策并不断取得更好的结果</strong>。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">我们自下而上地来看：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>认知层次</strong>：决策的前提是知识和信息丰富，正所谓知己知彼，决策前必须获得对自己、对对象的了解，才能支持决策的做出。
+</li>
+<li class="md_li"><strong>决策层次</strong>：有了充分的信息并不代表一定能够做出有效的决策，必须还要有决策原则、决策流程进行支撑，才能更好地决策。
+</li>
+<li class="md_li"><strong>元认知层次</strong>：决策做出后，还要将自己想要的东西去实现，必须依靠元认知的力量，通过自我觉察、对话、监督的方式，达到计划、监控、调节的目标，以帮助成果的取得。
+</li>
+</ul>
+
+<h2 id="toc_3">二、CIP模型的价值</h2>
+
+<p class="md_block">
+    <span class="md_line">越是现代的理论，越呈现出组合应用的特点。比如CIP认知信息加工理论、SCCT社会认知职业理论等，必须对前提理论进行掌握之后，才能更好地使用。所以，当我们第一眼看到CIP的时候，并不像黄金思维圈、TMBRT等模型那么直接，甚至无法调用自己的过往体验，无法感受到CIP能干什么用，这也是正常的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>越是无法用直觉感知，就越要启动理性去理解这个模型的价值。</strong>上文已经提到过，该模型的价值在于：“<strong>做出更好的决策和获得更好的结果</strong>”，为了帮助你更好地理解，我将CIP和系统思维结合在一起使用。你可以把这个模型理解为一个系统：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../框架模型/_image/cipsystem.png" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">你可以向自己提出下面的话术：“<strong>如果我想要让做某某事的结果（输出）更好的话，我要如何做呢？</strong>”这个话术的答案就是CIP模型，你就可以用CIP给出的结构来思考：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>自我认知</strong>：我要如何更了解自己，才能让结果变好？
+</li>
+<li class="md_li"><strong>对象认知</strong>：我面对的对象是什么，它的特点是什么，怎么样能够依据对象的特点来让结果变好？
+</li>
+<li class="md_li"><strong>决策</strong>：我的决策是否符合决策原则、决策流程，是否进行推演，思路是否高级……？
+</li>
+<li class="md_li"><strong>元认知</strong>：我是否知道自己在做什么？我为什么要这么做？遇到问题要如何处理……
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">试试看，如果你想要推进一项任务时，使用CIP模型衍生出的话术向自己提问并回答，那这件事做起来是不是显得更靠谱一些？自己也就不会像以前那样拍脑门做决策、遇到挫折就放弃了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">上述推导过程符合正向思考的逻辑，而CIP模型还可以逆向使用，<strong>当输出的结果好/不好的时候，你可以倒着分析究竟问题的原因出在哪里？</strong>要知道，这就是反思技术中最重要的环节，很多人不能掌握反思，就是因为对CIP不了解。</span>
+</p>
+
+
+<h2 id="toc_4">三、CIP模型从生涯到普适</h2>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">该模型在个人成长领域中很少有人使用，有几个原因导致如此重要的模型竟然鲜为人知：</span>
+</p>
+
+
+<ul>
+<li class="md_li">CIP最早在《生涯发展和服务：一种认知的方法》书中提出，该书籍的名字就决定了它的应用范围，只是在生涯领域；
+</li>
+<li class="md_li">CIP的理论艰涩难懂，很难让人有直观感受，传播性差。国内生涯教育的领军企业新精英生涯，在它过往的“生涯规划师”基础课中，曾经顺便提过该模型，但是在第三版的课程中，该原理甚至被删除了。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">不过，平庸的策略只能得到平庸的收益，很多人并不知道“自己的结果不好”是由于“决策能力缺失”导致的，所以，除了在果上拼命努力来显得自己很用心之外也没有什么更好的办法。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">而CIP是在因上努力的一种方式，它绝不仅仅只是在生涯领域中使用，你看它的名字就知道了，它关心的是信息加工。再次套用系统思维，<strong>CIP要做的就是把所有输入系统的信息，都在知彼知己的基础上、元认知的监控下、在稳定的决策体系运转中不断输出优秀结果</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">那么，请忘记CIP的出身吧，只要记得：<strong>CIP绝对是一种极为重要的个人成长，更是价值提升的关键模型，如果你期待自己变得更好、价值更高效地积累、交换和变现，CIP是个核心的框架模型</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">试想：“如果你期待着完成某一个项目，并且希望这个项目完成得更好，可以少做多得，你需要考虑哪些问题呢？”过去你遇到这个提问，可能就懵了，但是，现在使用CIP的四个部分逐一提问，问题很容易就解决了。</span>
+</p>
+
+
+<h2 id="toc_5">四、CIP各要素的细节说明</h2>
+
+<p class="md_block">
+    <span class="md_line">为了便于大家更好地使用该模型，我把每个要素的关键点进行简要、框架式地描述，如果你发现有哪个部分不清楚，也可以按图索骥地进行针对性地学习。</span>
+</p>
+
+
+<h3 id="toc_6">（一）对自己的认知</h3>
+
+<p class="md_block">
+    <span class="md_line">认识自己是一件很难的事情，之所以难，就是因为个体和外部环境会在一起相互构建：人能影响环境、环境也能影响人。在一个没有太大变化的环境下，个体也很难有变化，但是，如果环境突变，就无法推断个体会变成什么样了。正如那句话：“每个人都能被收买，关键看砝码有多少？”、“永远不要说自己是好人，你现在不错只是因为那个让你变坏的环境还没有出现罢了。”</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">即便如此悲观，但是我们还是要积极地对自己进行探索，持续获得对自己的认知。对自己常见的认知有以下几种：你的性格特征、气质类型、知识体系、学习经历、能力、触发及响应特点（第一印象）、三观体系、原则、兴趣爱好、资源等。自我探索的方法，我在“哲学+问题”、“价值思维 - 价值塔”中都有讲解，请移步至模型库查看。</span>
+</p>
+
+
+<h3 id="toc_7">（二）对对象的认知</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">根据对象的不同，所需要了解的要点各不相同，比如说：如何做好一顿饭，对象就是“这顿饭”；而如何跳槽，对象就是“职业选择”。独特性的事物也有其通用的部分，关于对对象的通用了解，可以从以下几个部分入手（话术）：</span>
+</p>
+
+
+<ul>
+<li class="md_li">你需要了解的对象是什么？请澄清它是什么以及谈论的边界？
+</li>
+<li class="md_li">这个对象的心理表征是什么？你可以去哪里找高手获得相关表征？
+</li>
+<li class="md_li">对象有没有必然的发展规律、阶段，以便我们找到它的特点？
+</li>
+<li class="md_li">对对象进行处理时，有什么必须遵循的原则和方法？
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">比如说我们希望和公司同事更好地相处，在了解自己是谁之后，就要明确自己到底要和哪些同事很好地相处，在相处中有哪些关键点，从陌生到熟悉要有哪些阶段、每个阶段自己要做些什么，自己和同事之间要遵循哪些原则等等。你看，CIP虽然不会直接告诉你答案，但是，“提问&gt;回答”，好的问题可以促进思考、可以推着自己得到答案。</span>
+</p>
+
+
+<h3 id="toc_8">（三）决策</h3>
+
+<p class="md_block">
+    <span class="md_line">决策是一个具体的行为，因此，你必须要拥有决策原则、决策流程和方法。决策原则可以分为通用原则和专业原则，我经常会在文章中提起我的决策原则，比如：能力圈、有热情、复利、边际成本递减、高胜率低赔率、被动积累高发地等。而每个专业领域都有自己的原则，比如说做牛排和下牛肉面的原则、推进例行任务和处理应急事务的原则都是不同的，如果你想在专业领域中有所建树，积累各种决策原则是极为重要的。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">决策也是有流程和方法的，总的来说可以用问题解决方法论的套路去嵌套：</span>
+</p>
+
+
+<ul>
+<li class="md_li">先判断自己要决策的是什么；
+</li>
+<li class="md_li">分析各种决策选择的原因和可能性；
+</li>
+<li class="md_li">提前推演，通过各种方式（合并、删减、综合）形成解决方案；
+</li>
+<li class="md_li">如果有多种解决方案，要进行评估和完美选项输出；
+</li>
+<li class="md_li">设定目标、提供资源支撑、防范风险；
+</li>
+<li class="md_li">执行和过程中的持续调整（这就涉及到元认知了）。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">这是决策的基本流程，结合着通用和专业决策原则，会更容易取得优质的结果。</span>
+</p>
+
+
+<h3 id="toc_9">（四）元认知</h3>
+
+<p class="md_block">
+    <span class="md_line">决策后的执行中，必须有元认知介入控制，否则，自己期待的结果很难出现的。元认知是认知的认知，是你可以跳出自己的身体看自己的能力，包括着：自我觉察、自我对话、自我监督的子能力。自我觉察，能够让自己找出触发器和自然响应的关系，并且调整第一反应；自我对话，能够让自己找出影响决策的理性和感性冲突，甚至可以要求不同立场的感性和理性进行对话，解决冲突；自我监督，是观察自己的思想、行为，提前分析可能对决策结果产生哪些影响，以提前进行干预。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">元认知可以在没有外部干预的情况下，形成一种温和的、自律的自我互动环境，通过提前设置目标、制定计划，过程中根据现实情况进行调整等方式，帮助自己处理决策推进、落实中所遇到的冲突和挫折问题，并让自己更好地取得决策成果。</span>
+</p>
+
+
+<h2 id="toc_10">五、总结</h2>
+
+<p class="md_block">
+    <span class="md_line">CIP模型是一个很有价值的框架思考模型，我甚至一度将其称为心智能力：当两个人在遇到同样的选择时，他们很有可能做出截然相反的选择，原因是什么呢？我认为就是心智力量的差距，因此，我一直将心智解释为CIP。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">此外，文中也提到过了，<strong>CIP对于反思来说非常重要</strong>，它甚至就像是一个密码本，提供了一个想事、做事通用的套路，你在正向状态下，可以用CIP得到好结果，也可以用逆向工程的思路，通过结果和CIP反编译出问题的原因，大大提高反思的效率。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这么重要的框架模型，我并不能帮你在一天里掌握。但是，想想看，我会将其和“黄金思维圈”、“哲学+问题”等模型归为一个分类下，也充分说明它的价值。所以，请耐心尝试，在具体工作中用CIP思考、在反思中用CIP进行反编译，我期待得到你有所收益的反馈。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">最后，我提一个小的思考题：请在留言板上写下一个你自己做得不错的小事儿，然后用CIP模型分析，你取得好成果的主要原因是什么呢？快快留言吧。</span>
+</p>
+
+
+<h2 id="toc_11">六、其他资料</h2>
+
+<ul>
+<li class="md_li">成长的四大元素：解释系统、决策系统、假设、反思过程，参考文章<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247485041&idx=1&sn=7317b6157b3fe4adbacb53b98f861dae">《终于想清楚了，如何实现我的使命！》</a> 、 <a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247484747&idx=1&sn=1de97933c0966c790320a75406c1d5af">《更高效的解释和决策，真正决定你的效率》</a>。
+</li>
+<li class="md_li">和决策有关的书籍：《思考，快与慢》，讲到了如何在不确定性的条件下进行判断和决策的方法及依据；《决策与判断》、《决策与理性》、《如何做出正确决策》等。
+</li>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247486290&idx=1&sn=dee9be35343b5d92cc363c330b41df6d&chksm=e927a30bde502a1dafb576526847235c40dd5314a4d8ba9c99b0c77d26813def4d982e381a4c#rd">《CIP：如何取得更好结果的框架思考模型》</a>
+</li>
+</ul>
+
+<h2 id="toc_12">ChangeLog</h2>
+
+<ul>
+<li class="md_li">2017年10月27日 发布了所有内容 by 易仁永澄
+</li>
+</ul></div>
+
+
+</div>
+
+
+<div class=" pure-u-0-24 pure-u-sm-0-24 pure-u-md-6-24 pure-u-lg-1-5 pure_cell">
+
+
+<link href="../../fb_static/api/html/auto_toc/auto_toc.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+
+
+
+
+<style type="text/css">.doc_toc_container.affix{ top: 20px }</style>
+
+<div class="doc_toc">
+  <div class="doc_toc_container">
+    <div class="nav"><ul>
+<li>
+<a href="cip.html#toc_0">CIP：认知信息加工理论</a>
+<ul>
+<li>
+<a href="cip.html#toc_1">〇、引言</a>
+</li>
+<li>
+<a href="cip.html#toc_2">一、CIP简介</a>
+</li>
+<li>
+<a href="cip.html#toc_3">二、CIP模型的价值</a>
+</li>
+<li>
+<a href="cip.html#toc_4">三、CIP模型从生涯到普适</a>
+</li>
+<li>
+<a href="cip.html#toc_5">四、CIP各要素的细节说明</a>
+<ul>
+<li>
+<a href="cip.html#toc_6">（一）对自己的认知</a>
+</li>
+<li>
+<a href="cip.html#toc_7">（二）对对象的认知</a>
+</li>
+<li>
+<a href="cip.html#toc_8">（三）决策</a>
+</li>
+<li>
+<a href="cip.html#toc_9">（四）元认知</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="cip.html#toc_10">五、总结</a>
+</li>
+<li>
+<a href="cip.html#toc_11">六、其他资料</a>
+</li>
+<li>
+<a href="cip.html#toc_12">ChangeLog</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/affix.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/scrollspy.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/api/html/auto_toc/auto_toc.js@version=0.0811"></script>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+<div class="sidebar_clicker click_to_close_sidebar"><span class="bar"></span>
+
+</div>
+
+
+
+
+
+
+
+<style type="text/css">.sidebar {
+    left: 0px;
+    right: auto;
+    border-right: 1px solid #eee;
+
+    width: 250px;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background: #fafafa;
+}
+
+
+
+</style>
+
+
+<script type="text/javascript" src="../../fb_static/api/html/auto_sidebar.js@version=0.0811"></script>
+<link href="../../fb_static/api/html/auto_sidebar.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+<script>run_sidebar("left", 'sidebar', 250, "show");
+</script>
+
+    <script>$(document).ready(function(){
+    var sidebar = $('.index_body'); var current = $('.index_body .active');
+    if (sidebar.length && current.length){ sidebar.scrollTop(current.offset().top - sidebar.height()/2 + 100);}
+})
+</script>
+  </body>
+
+</html>

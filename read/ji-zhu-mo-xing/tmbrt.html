@@ -1,0 +1,1167 @@
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <head>
+<script type="text/javascript" src="../../fb_static/lib/jquery.js@version=0.0811"></script>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>TMBRT-甜面包热汤模型</title>
+
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta name="renderer" content="webkit">
+
+<link href="../../fb_static/lib/pure.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/pure_patch.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/markdown/basic.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../template/style.scss@app=wiki%252Ffit.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">body {margin-left: 250px}
+.index {width: 250px}
+
+</style>
+  </head>
+
+  <body>
+
+
+    <div class="sidebar">
+      <div class="sidebar_body">
+        <div class="index">
+          <ul class="index_body">
+            <li class="title"><a href="../../index.html">易仁永澄的模型库</a>
+
+            </li>
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>1</b> 思维方式</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../si-wei-fang-shi/value.html"  title="价值思维"  class="link_in_site"><b>1.1</b> 价值思维</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../si-wei-fang-shi/system.html"  title="系统思维"  class="link_in_site"><b>1.2</b> 系统思维</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>2</b> 框架模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/goldencircle.html"  title="黄金思维圈"  class="link_in_site"><b>2.1</b> 黄金思维圈</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/zhexue.html"  title="哲学+问题"  class="link_in_site"><b>2.2</b> 哲学+问题</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/cip.html"  title="CIP：认知信息加工理论"  class="link_in_site"><b>2.3</b> CIP：认知信息加工理论</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/nl6l.html"  title="理解层次"  class="link_in_site"><b>2.4</b> 理解层次</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>3</b> 技术模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item active" >
+
+<a href="tmbrt.html"  title="TMBRT-甜面包热汤模型"  class="link_in_site"><b>3.1</b> TMBRT-甜面包热汤模型</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="dualcoredriverengine.html"  title="双核自驱引擎"  class="link_in_site"><b>3.2</b> 双核自驱引擎</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>4</b> 永澄暗箱</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../yong-cheng-an-xiang/pgossystemdynamicanalysis.html"  title="“个人成长操作系统”系统动力分析原理"  class="link_in_site"><b>4.1</b> “个人成长操作系统”系统动力分析原理</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+<div id="search_bar">
+
+
+  <input id="search_posts_keywords" placeholder="Search"  type="text" value="" />
+
+</div>
+
+
+
+<script>var search_base_url = "/";
+var search_under = "";
+$(document).ready(function() {
+    var search_posts_dom = $('#search_posts_keywords');
+    search_posts_dom.val("");
+
+    if (location.search.indexOf('?s=') === 0 && search_posts_dom.length) {
+          var old_keywords = search_posts_dom.val();
+          search_posts_dom.focus().val(old_keywords);
+    }
+    var search_posts = function(){
+        var keywords = search_posts_dom.val();
+        var url_to_jump = location.protocol + '//' + location.host + search_base_url + '?s=' + keywords;
+        if (search_under){ url_to_jump += "&under="+search_under}
+        location.href = url_to_jump;
+        return false
+    };
+
+    search_posts_dom.keyup(function(event) {
+          if (event.which === 13) {
+            search_posts()
+          }
+          return false;
+    });
+
+    $('.search_in_html_button').click(search_posts);
+})
+</script>
+
+
+
+
+
+    <div class="content">
+      <div class="content_body">
+        <h2 class="post_title">TMBRT-甜面包热汤模型</h2>
+
+
+
+
+<div class="pure-g">
+
+
+
+<div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure-u-lg-4-5 pure_cell">
+
+
+        <div class="post_body markdown"><h2 id="toc_1">〇、引言</h2>
+
+<p class="md_block">
+    <span class="md_line">去年，我在橙子学院开了一门训练营的课程——<a class="md_compiled" href="http://api.xjy.cn/weixin/chengzi/detail/id/31.html">习惯养成训练营</a>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/tmbrt-1.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">在里面我提出了一个叫做<strong>甜面包热汤</strong>的模型，用这个模型可以养成习惯。但是，很多人可能并不知道，这个叫TMBRT（为了记得方便，我将其起名为甜面包热汤）的模型，它的名字是：<strong>人类行为本质简化模型</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这个看起来搞笑的<strong>TMBRT模型</strong>，竟然是讨论整个人类的行为，不仅如此，它讨论的竟然是行为的本质，这是谁搞的模型？学了这个模型有什么用呢？</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">TMBRT系列我要解决以下的问题：</span>
+</p>
+
+
+<ul>
+<li class="md_li">TMBRT模型的基本介绍及应用案例；
+</li>
+<li class="md_li">TMBRT模型的原理介绍；
+</li>
+<li class="md_li">TMBRT可以在哪些领域中得到应用？
+</li>
+</ul>
+
+<h2 id="toc_2">一、TMBRT模型简介</h2>
+
+<h3 id="toc_3">（一）基本释义</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">TMBRT是我自创的模型，我将几个要素组合在一起，由同事黄采懿将这串英文连在一起，谐音叫了这个：甜面包热汤模型。这几个要素分别是：</span>
+</p>
+
+
+<ul>
+<li class="md_li">T：Trigger，触发器；
+</li>
+<li class="md_li">M：Motivation，动机；
+</li>
+<li class="md_li">B：Behavior，行为；
+</li>
+<li class="md_li">R：Reward，奖励；
+</li>
+<li class="md_li">T：Trigger`s Sensitivity，触发器敏感度。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">它们的首字母一拼，就是TMBRT，你喊它是甜面包热汤模型，朗朗上口也蛮好的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/tmbrt-2.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">上图就是这个模型的图像化展示，右下角的小字写着：<strong>人类行为本质简化版</strong>@易仁永澄 2015.12.14，说明这个模型的名字以及它的创建时间。（说实话，越长大越发现年轻的自己嚣张的不得了，在没有充分的科学研究基础支持下，竟然敢叫它是“人类”、“行为本质”，嗯，谁没有年轻过呢~）</span>
+</p>
+
+
+<h3 id="toc_4">（二）应用范例1：暴躁的脾气</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">这个模型主要用来解释和分析，找出某一种行为背后较为根本的原因。</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">小A来找我抱怨说，非常不喜欢自己的脾气。大家都说小A的脾气非常暴躁，他也觉得是这样的，有的时候，别人给他说个事情，小A就好像是一个点着的爆竹，一下子就炸。小A说自己也不想这样，可是就是控制不住。不知道怎么办？</span>
+</p>
+
+</blockquote>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">用TMBRT来看一下：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>触发器（T）</strong>：当他人向自己提出建议，其实，提出建议没有什么问题的，但是，很多人无法区分建议和质疑之间的关系，他会以为他人在质疑自己，并将其认定为：有人要伤害自己。
+</li>
+<li class="md_li"><strong>动机（M）</strong>：内心瞬间产生自我保护的需求，并驱动自己产生自我保护行动的动机。
+</li>
+<li class="md_li"><strong>行为（B）</strong>：由于过往的做法中，“使用暴躁的情绪可以将其他人吓跑”这个行为是最具有有效性的，于是动机直接调动了这条解决方案。于是，自己立刻采取“表现出暴躁的样子”的行为。
+</li>
+<li class="md_li"><strong>奖励（R）</strong>：提议的人因为各种原因，停止向小A提出建议。这个时候，因为解决方案生效让“被伤害”的威胁消失了，内在的小我也放松下来，获得奖励（后文会具体解释，为什么奖励都是内心的放松）。
+</li>
+<li class="md_li"><strong>触发器敏感度（T）</strong>：这个过程强化了“只要有人给我提建议，我就要用暴躁的情绪吓跑他”这个触发器的敏感程度。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">最后，整个过程的大部分环节都被反复强化地写到自己的身体中，并且自动运转，当事人都不考虑究竟自己为什么做出如此举动，他们只是记得一个句式：<strong>如果（If）有人提出建议，那么（Then）我就立刻暴躁起来。</strong>（这句话之所以要特别标注出来，因为If……Then……这个句式也是一个非常重要的模型，它叫执行意图，未来我们再聊。）</span>
+</p>
+
+
+<h3 id="toc_5">（三）应用范例2：常常被人蛊惑</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">来看另外一种例子。</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">小C经常会因为别人给自己推荐的拉人头、搞直销的事情所吸引，只要有人跟自己说可以加入代理能赚多少钱，他就急不可耐地冲上去。往往事与愿违，不仅没有赚到钱，几次被坑，身边的朋友也因为他拼命地推荐而离他远去。他想知道自己为什么那么不自制。</span>
+</p>
+
+</blockquote>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">我们照样用TMBRT来进行分析：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>触发器（T）</strong>：有人告诉自己某某某事情可以赚钱，自己也很需要钱。
+</li>
+<li class="md_li"><strong>动机（M）</strong>：内心产生想要将金钱归为己有的需求，并驱动自己产生冲上去的冲动，让自己动起来的动机就在短瞬间内产生。
+</li>
+<li class="md_li"><strong>行为（B）</strong>：根据别人的提供的渐进式上套方式，提交了资料、交了钱，内心开始构想这一次的收益，甚至想着“这一百万到手后，我要买两个煎饼果子，吃一个扔一个！”
+</li>
+<li class="md_li"><strong>奖励（R）</strong>：如果赚钱的话，就满足了他的期待；如果赔钱了的话，会产生一种更奇怪的情绪，他会想着下一次再用同样的方法赢回来，于是期待着下一次机会的出现。
+</li>
+<li class="md_li"><strong>触发器敏感度（T）</strong>：不管赚不赚钱，他都会持续强化对拉人头直销的敏感，只要有类似的项目，自己就会扑上去。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">你可以试着看一下，很多反反复复出现的问题，都可以用TMBRT模型进行解释。</span>
+</p>
+
+
+<h2 id="toc_6">二、TMBRT模型的原理详解</h2>
+
+<p class="md_block">
+    <span class="md_line">本部分谈谈模型背后的原理：为什么我们的行为会被那么容易触发，以及如何应对身边的各种刺激，越能理解TMBRT，就能更好地应对那些用各种手段抓走你的注意力的人，以及如何聚焦自己的精力去创造价值了。</span>
+</p>
+
+
+<h3 id="toc_7">（一）M：动机</h3>
+
+<h4 id="toc_8">1. 动机简介</h4>
+
+<p class="md_block">
+    <span class="md_line">TMBRT模型中，虽然触发器排在最前面，但是，某一个行为之所以会被诱发，根本上来说还是因为有某一种动机存在。<strong>正是因为这种动机的存在，触发器才有可以触发的对象</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">动机本是一个心理学的概念，你可以简单地理解为<strong>动机可以为你的心理过程、行动过程提供内部动力，是大部分行为的基础。</strong>形象点说，如果说我们的思想和行动是一辆奔跑的汽车，那么，动机就是它的发动机。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">我在以往的文章中，使用动机、动机结构分析过很多问题，比如说当放假回来上班的时候，为什么状态很难调整等，都是因为动机结构微调导致的。我也把几篇相关文章提供如下：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><a class="md_compiled" href="http://mp.weixin.qq.com/s/Uax5qH3LMkGM3UIEHOCLDQ">《休假之前如果只做一件事，就必须是这个》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="http://mp.weixin.qq.com/s/_rcIvqCSLUpelaNH6HuT8w">《自我管理系统重启初始化操作》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="http://mp.weixin.qq.com/s/0Xzq-XsxcR_p37OzNDbMHQ">《彻底解决目标反复失败的三个方案》</a>
+</li>
+<li class="md_li"> <a class="md_compiled" href="http://mp.weixin.qq.com/s/9u1u6TSAcU6P4AR-oSYj4A">《目的不清，你怎么保证做事的高效》</a>
+</li>
+</ul>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">关于动机的研究非常多，我只把我自己感兴趣的部分罗列，如果你希望跟我达到一致，也可以去学习研究：</span>
+</p>
+
+
+<ul>
+<li class="md_li">自我决定论；
+</li>
+<li class="md_li">动机在游戏化中的实践；
+</li>
+<li class="md_li">动机对分析、判断、决策的影响；
+</li>
+<li class="md_li">直接维基：<a class="md_compiled" href="https://zh.wikipedia.org/wiki/动机">动机理论</a>，这里谈了十种动机理论，但是需要科学上网。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/tmbrt-8j.jpg" alt="" title="" ><br /></span>
+    <span class="md_line">（上图来自《游戏化实战》，我做了部分翻译工作）</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">动机是个知识的大坑，我从2015年年底开始感兴趣到现在还在里面玩着呢。推荐来学学动机的相关理论，可以解决自身各种问题。之前我创业过程中掉的一个个大坑，之所以能爬出来，并不是我很会复盘，而是因为我对动机的掌握，可以分析出每次掉坑背后的真正的原因。</span>
+</p>
+
+
+<h4 id="toc_9">2. 象与骑象人</h4>
+
+<p class="md_block">
+    <span class="md_line">在模型图中，我把动机用一头大象的形象来表示，这个的来源是一本名为《象与骑象人》的书，书中把我们的感性比喻成一头大象。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">经过反复和自己的、他人的大象相处，我发现大象有这样三个特点：</span>
+</p>
+
+
+<ul>
+<li class="md_li">趋利避害
+</li>
+<li class="md_li">只顾当下
+</li>
+<li class="md_li">易被激发
+</li>
+</ul>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">想想看，如果我们的理性是骑象人，我们坐在这样的大象身上，会怎么样呢？大约有这样两大类三种情况：</span>
+</p>
+
+
+<ul>
+<li class="md_li">通常情况下，大象还是比较听话的，骑象人让它去哪里它就去哪里；
+</li>
+<li class="md_li">如果遇到了特别诱惑的东西，大象就开始狂奔起来，如果遇到一些可能造成伤害的东西，大象就会站着不动。这两种情况下，骑象人一点办法都没有，只能说服自己听大象的话。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">举几个例子看看：工作的时候因为一个分心点开一个网页，就可能去了微博、淘宝，开了某个独立站点，大脑飞奔不停，自己完全不能控制；虽然明天必须要交报告，但是自己还是不想做，欺骗自己还有时间，可以玩一会、闲一会，越等越晚，越拖越焦虑，越能自我欺骗。这都是骑象人屈从于大象的表现。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">我们可以用花园来比喻自己控制动机的能力。一个花园你不去打理它，它就会乱糟糟的，什么杂草都会生长进来，很有可能把真正的花都赶跑了。动机也是一样，如果你不去训练它，它就很容易被触发器所激发，你甚至想象不到，大象会被调戏成什么样子（训练的方式我在后面给出）。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">《象与骑象人》把不能有效和大象相处的原因、恶果分析的清清楚楚，推荐大家学习，尤其是在这个到处都是可怕的触发器的环境中，你更得懂一些原理。此外，也可以看一些心理学著作，例如《内在的小孩》，会把大象称为小我，也是满贴切的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">毕竟大象、骑象人、内在的小孩、小我都是隐喻，它可以用来理解，但是并没有说到点上。在认知科学里，动机，是大脑工作机制的结果，并不是原因，如果要更清楚地理解动机，那就要弄明白大脑工作的相关机制。所以，更彻底点的方法，不如去看看《心智探奇》、《思考，快与慢》、《超越智商》，理解原始脑、负责情绪和理性的大脑其实可以分开，快思考和慢思考是两种机制，而如果要让自己更能自控，跟自主心智和算法心智没有什么太大关系，而是反省心智的不断训练和使用。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">关于动机就说到这里吧，这里留一个小的思考题：内心的小我和动机之间是什么关系？既然触发器可以触发动机，那第一个动机是什么？</span>
+</p>
+
+
+<h3 id="toc_10">（二）T：触发器</h3>
+
+<p class="md_block">
+    <span class="md_line">触发的概念，不仅仅用在TMBRT模型里，<strong>只要涉及到交互都会有触发这个概念</strong>。比如说：鼠标滑过链接，下方出现超链接；如果船升起白帆，那就表明我们获得胜利了；旁边的人站起来再坐下的时候，我就站起来，这样能形成人浪；当风量达到9级的时候，启动红色预警机制。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">有没有发现，所有的句式都像“开灯”一样：<strong>if …… then ……</strong>。如果你按下开关，那么，灯就亮了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">触发器，就是if……。但是，触发器之所以可以起作用，关键是因为它可以触发某一些事情，还拿灯来说，如果开关里面的线没有接，那不管怎么触发，结果都不会出现的。换句学术一点的词叫做：<strong>如果触发过程没有被识别，则被触发实体并不会做出响应</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">注意这几个关键词：<strong>触发、识别、响应</strong>，加强对它们的理解，可以让自己过得更好。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">既然我关注的是个人持续高效能成长，那我们就把这些词的范围缩小一点来说。注意这个结论：如果未经训练，我们会用第一反应对触发器进行响应和识别。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">路上两辆车差点蹭到一起，他们停下车的时候，都惊魂未定，A下车就拉高嗓门大喊：“你是不是不会开车？”B听了之后，说：“NMB，就你TMD会开车，你就这么开车？”A说：“我艹，我TMD骂你了没有，你Y什么素质，你妈怎么生的你？”B说没说话，上去就一拳……</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这种事情常常出现在生活中，你看他们并没有经过训练，所以，<strong>他们会根据自己的过往经历对触发器进行响应</strong>，要知道，很多人的原生家庭、成长环境并不如意，过往经历形成的第一反应（响应）往往是自我保护（还记得脾气暴躁者的例子么？），而自我保护的第一反应往往是过激的行为。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">最近一些书，让你拥有钝感力，让你想办法离线，或者遇到事情数10个数，连续数3遍等等，都是对第一反应进行调校的一种做法。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">但是，面对触发器的肆虐，根本的做法来自于“超级主动”。每个人都有自主生活的权利，所以，我们可以把自主分为三个级别：</span>
+</p>
+
+
+<ul>
+<li class="md_li">被动
+</li>
+<li class="md_li">主动
+</li>
+<li class="md_li">超级主动
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">超级主动这个词，英文是Proactive，我在以前的一个活动中用过这个词，见图：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/proactrive.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">不知道您想没想起来，其实，这就是个人成长六大元规范首位规范——积极主动。关于积极主动，这里就不展开说了，我对于积极主动的四个层次已经分别讲述过了，请具体查看：<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247484814&idx=1&sn=9951d07bbfc35d787d46005c98cddfc3">《积极主动，一切成长的第一保障》</a>。特别强调：关于积极主动的内容，务必要多看、多实践，任何想要成事之人，必须要有这个能力。</span>
+</p>
+
+
+<h3 id="toc_11">（三）奖励</h3>
+
+<p class="md_block">
+    <span class="md_line">我在之前的习惯类、目标设置类的课程中，经常会让大家思考当一个目标完成的时候，会给自己什么奖励。关于奖励，大家写什么的都有，买个什么物件、看个什么电影、吃顿好的等等。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">但是，这其实并不是奖励，这甚至是一种伤害。当我们努力投入时间最终实现某一个目标的时候，这明明是意义感得以实现的时候，是内部动机得以满足和感受愉悦的时候，偏偏来了个外部奖励，直接伤害了内部动机。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>外部奖励不仅仅是奖励，也是一个Trigger，绝大多数人对这个触发器都是按照第一反应进行响应的</strong>。它导致的后果是，如果没有外部的奖励，自己就什么都不想做了。本来好好的一个帮助自己构建内部动机的手段，却成了未来做事的目的，手段目的化的深坑啊（见老文：<a class="md_compiled" href="http://blog.hiddenwangcc.com/archives/2601">《各种错误都来自于一个误区——手段目标化》</a>）！</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">要知道，对于你这个个体而言，外部的物质是奖励，但是对于大象来说，<strong>真正的奖励叫做认知放松。</strong>这个词，来自《思考，快与慢》的第五章（再次推荐大家参加我对《思考，快与慢》的领读活动，地址：<a class="md_compiled" href="http://fastslow.top">http://fastslow.top</a>，用最高标准的领读，你值得来！）。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">当我们处于认知紧张的状态下，大脑工作机制的系统2就会启动，而系统2是需要意志力、注意力才能维持的，这不符合进化而来的“能耗最小原则”，所以，大脑希望用各种方法让认知不要紧张了，赶紧放松下来。当认知放松的时候，对于大象来说，就是最大的奖励，为了这个奖励，大脑不惜一切地进行自我欺骗。如果没有对系统1&amp;系统2、反省心智的持续训练，人们很难发现自己正在欺骗自己。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">大脑的机制很简单：先看看系统1能否解决，不能就让渡给系统2，如果系统2还不能解决，那就麻烦了，这件事情再次被推给系统1，系统1就开始夺取身体的控制权，要求系统2想办法说服自己，坚信这件事是极大困难/自己做不到/自己要做到完美，如果不完美自己就不做……等等的谎言之中。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">因此，请增强你的觉察，如果你发现自己总是犯同样的错误，别人提醒了自己也当耳旁风，下一次做还是会掉坑，每次掉坑自己又特别不爽的话，务必要多考虑一下：明明应该在认知紧张中把问题解决的，可是，怎么偏偏就自我欺骗又放松了呢？到底是什么让我做错了？我用什么谎言让自己放松了呢？我要怎么解决这个问题呢？这几个话术问问自己看看，效果很好的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">TMBRT模型看似简单，并且名字叫起来很好听，但是，它并不是一个简单的东西，背后对应多重认知、心理学的原理，并且这些原理要组合使用才能将问题解释清楚。虽然复杂，但是它重要，它符合复利和边际成本递减的决策原则，请务必好好训练把握，多分析他人的问题，多分析自己的问题，慢慢，问题就难不住你了。</span>
+</p>
+
+
+<h2 id="toc_12">三、TMBRT的深度原理说明</h2>
+
+<p class="md_block">
+    <span class="md_line">TMBRT这个模型是我为了帮助用户快速理解对象而设计的，虽然把很多关键的要素呈现了，用户使用起来也会方便，可是，它毕竟只是简化版，只是行为本质的一个部分。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">对于这个模型，我们在应用之间的差别，来自于一个关键的概念：<strong>需求</strong>。需求是动机的基础，可是，TMBRT中并没有需求这个概念出现（其实是有的，我在谈动机的时候，就谈到需求了，只不过，很多人并不在意罢了）。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/屏幕快照&#32;2017-09-15&#32;11.41.55.png" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">其实，触发器所直接触发的不是动机，而是内心的需求，未被满足的需求就会形成认知紧张感，这种紧张感就要求自己赶紧放松下来，于是就会激发各种动机（有内部的也有外部动机）。<br /></span>
+    <span class="md_line">前文提到过，未经过训练的伙伴，会用第一反应去将动机表达出来，这就是一种没有意识的状态（反省心智训练不足）。因为没有意识，所以行动自然而然就出现了，这个时候，无论是满足了冲动还是内在需求，认知都会放松下来。表面上已经结束了的过程，其实，有两件事还在悄然发生：</span>
+</p>
+
+
+<ul>
+<li class="md_li">认知放松带来的奖励会强化这种触发器和需求之间的对应关系；
+</li>
+<li class="md_li">无意识产生的行为会成为触发器，触发下一个循环。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">这是一个轮回问题，古典老师给出过一个结论：对于轮回问题，如果当下的收益和长远收益是冲突的，那么，很有可能你正处于死亡轮回中，越过越过不好。大象就是一个关注短期收益的家伙，它才不管长期回报的问题呢，所以，越是用第一反应，越可能陷入死亡循环（忽然想起来，第一反应还会带来平庸的策略啊）。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">无意识的部分说完了，再看看面对动机促动，我们可以做出有意识的反应的部分，你会知道自己为什么（Why）而做，也知道自己要如何（How）做，甚至能想清楚做成什么样的（What），这就是黄金思维圈所关心的。我在黄金思维圈的文章中也反复提过了，这就是目标导向型的行为。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">介绍了人类行为的循环过程，你会发现，关键词是：<strong>触发器、需求、认知紧张、有无意识、行为、奖励。</strong>这些词可以解决多种问题，比如：目标制定、拖延行为、自我效能、结果预期、习惯养成、自律、情绪调整等，而这些问题也会发生在家庭、工作、学习、人际交往、自我实现等有人参加的所有领域中。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">所以，学习一个高阶的模型，可以解决N多问题，并让你可以在若干领域中变得游刃有余，花点时间是非常值得的。</span>
+</p>
+
+
+<h2 id="toc_13">四、TMBRT模型的具体应用</h2>
+
+<h3 id="toc_14">（一）应用范例</h3>
+
+<p class="md_block">
+    <span class="md_line">TMBRT模型，可以用来分析促发某一种思想、某一种行为的原因，利用第二部分的原理，可以利用TMBRT来进行反思和复盘。我也特别提到了，不同人反思程度不同，跟自身眼界有关，但是，是否有这种模型思维差别也是极大的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果你知道如何通过TMBRT来分析触发器，知道自己的决策是被什么激发的，并且可以深度讨论为什么自己会响应这种触发器，就可以继续推导自己的动机，找出背后真正的需求，再通过需求，可以找到自己究竟相信什么。如果你的反思可以打到信念体系上，反思才呈现出极高的价值。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">此外，TMBRT可以让你拥有更好的理性状态，在进行决策的时候，不至于陷入情绪状态而做出非理性决策。举个例子：写这篇文章的时候，我正在去北京的高铁上，而我家对面的健身房今天开业，我让我妈妈帮我去办个会员卡，她发给我一张报价图：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/WechatIMG36.jpeg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">销售跟我妈妈说了以下的内容：“阿姨，这次咱们的荣誉终身卡的比较合算，再就是钻石VIP储值次卡，荣誉次卡你可以带另外一个人免费入场，荣誉次卡只有10个名额，相当于每年只要1400元啊，你还可以在各个门店使用。”</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">触发器很多，每个都在促发人的动机：</span>
+</p>
+
+
+<ul>
+<li class="md_li">T：合算，促发动机是渴望……；
+</li>
+<li class="md_li">T：带一个人，促发动机是社会关系……；
+</li>
+<li class="md_li">T：免费入场，促发动机是炫耀……；
+</li>
+<li class="md_li">T：10个名额，促发动机是稀缺性、归属、拥有……；
+</li>
+<li class="md_li">T：只要1400元，促发动机是占便宜……
+</li>
+<li class="md_li">T：荣誉终身，促发动机是归属、攀比……
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">每个动机都会带来内心的认知紧张，我们会开始在脑海中构想场景：如果我有了这张卡，那么……当然，也会构想另外的一个画面，如果10张卡片里面没有我的名字，我会多么吃亏啊，诶，那曾经很可能是我的啊……</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">人类是能够想象的动物，我们受制大脑，大脑受制于环境（见《思考，快与慢》第四章——促发效应）。多重触发器叠加的环境，目的指向很明确，就是让你产生购买行为，购买了认知就会放松，奖励就来了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">商人从来都说你会得到什么，而不是你会失去什么。他不会告诉你，终身荣誉的时间只是6年，不会告诉你，6年的绑定你会损失什么机会成本，不会告诉你，它走的是上坡路还是下坡路。如果绑定在一个持续倒霉的东西上6年，那是多么可怕的场景啊！看看成熟的投资者的策略是什么：小额建仓，观察表现，分析发展，找到机会，重仓压上，耐心等待，获利退出。虽然不见得完全适用，但是，这是高概率正确、低赔率的方法。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">虽然说，买哪个跟财务状况有关，跟其他需求的综合判断有关（比如相信它的品牌，将服务完整外包等等），但是，TMBRT的分析方式至少让你摆脱被他人随意控制，不断交税的低收益投资方式。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">聊了TMBRT的两个价值点，我们继续回到原来的思路上，继续进入模型的内部，把更深层次的原理看懂，然后看看它在不同领域的应用吧。</span>
+</p>
+
+
+<h3 id="toc_15">（二）应用进阶方式</h3>
+
+<p class="md_block">
+    <span class="md_line">前面，我们谈到了TMBRT模型在分析和解释上的使用方法和原理，现在可以看看它另外领域的使用了。我想谈一下关于TMBRT对于“挫败”的改进思路，比如说习惯养成中不能坚持、目标推进中受阻等。我以习惯为范例来具体介绍。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">我们都知道的， 人是由习惯构成的，形成一些好的习惯，在时间的积累下，结果会很不一样。想想看，就拿最简单的饭后漱口来说，一次两次没啥差别，五年和十年可能差别就看出来了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">大家都知道这个道理，所以都很期待养成一些习惯。但是，坚持不下去，成了习惯养成的大敌，多少英雄好汉都折腰在这个问题上，我们看看用TMBRT如何解释这个问题。</span>
+</p>
+
+
+<h4 id="toc_16">1. 动机</h4>
+
+<p class="md_block">
+    <span class="md_line">大象是一个趋利避害的家伙，它有的时候很勇敢，有的时候很胆小，所以，你要鼓励大象，让它有力量，那种力量是来自于大象真正的欲望，而不是别人在养成什么习惯，你就照着做，多用黄金思维圈问问Why。所以，不要给自己设置太难的目标，比如，你天天过半夜才睡，突然要给自己定下晚上10点睡觉的习惯，这就有点难了。另外，意义一定要明确，自己这么做究竟是为什么，甚至可以用5Why的方式来探索，就是问五次为什么，用来持续探索意义。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">还有，我非常不喜欢用“坚持”这个词，它会让人产生误解，以为“坚持”是一种方法。但是，“坚持”是一种状态，是一种结果，它是因为你做对了什么之后，别人对你的一种评价。比如说你觉得早晨要吃饭，于是你就按照你想的做而已，对于那些不吃早饭的人来说，你真的好能坚持啊，可是，你并不觉得自己是在坚持，只不过，你们的标准不太一样罢了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果非要用到坚持的话，那说明真的没有办法，只能用这个下下策了，比如说生孩子，看着产妇开骨缝疼的要死，你只能说坚持……坚持如果可以用来当方法的话，只能用在短期的事情上，不要超过3天，3天以上就很难坚持了。所以，<strong>坚持会让人产生压力，让大象感到害怕，你越说坚持，大象越不想动了。</strong>（关于坚持的问题，我写过文章，请看：<a class="md_compiled" href="http://blog.hiddenwangcc.com/archives/2853">《放手，不要再坚持了》</a>）</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">最后，对于大象来说，最好让它能够在一个方向上奔跑。因为它特别容易被激发，如果让它在不同方向上切换，它的能量会损耗，效果会大打折扣。比如说，我有个叫霜降的伙伴，她前几天反思了自己这一年的学习，买的课程大约有：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/WechatIMG1884.jpeg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">大象在这样的情况下会崩溃的，所以，它的选择一定是什么都不干，站在原地不动。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">总结一下，对于大象而言，不要谈坚持、用真正的欲望让自己有力量、意义要持续明确以让自己保持坚决、方向要清晰且稳定、设置好适当的难度。</span>
+</p>
+
+
+<h4 id="toc_17">2. 触发器</h4>
+
+<p class="md_block">
+    <span class="md_line">我经常听到下面的对话：“你为什么迟到了？我的闹钟没有响……”你看，这就是没有安装触发器的结果。很多人有类似的情况，比如因为手机没电闹钟没有响，错过了航班、火车；明明有一件很重要的事情，但是却没记下来，没有提醒机制，导致这件事情没有推进等。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这就是未设置触发器和触发器无效的典型案例。对于这种问题，解决起来很简单的，这叫做风险管理，提前思考判断可能的风险、防范策略、应对策略就好了。实在不行，就在一次次反思中，对已经发生的触发器无效的问题进行再次调整来不断找出更好的触发器。比如，我因为晚上会加班加到比较晚，早晨有的时候会耽误事情，因此我就给自己设置了晨型官，她专门负责在早晨有事的时候，叫我起来。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">关于触发器，有个很麻烦的问题，就是触发器凌乱。这个问题主要源自环境，在一个杂乱的环境下，各种诱惑非常多，可以随意就激发了自己，让大象跑到其他地方去了。虽然问题由环境激发，但是本质的原因还是在自己，因为你自己对触发器进行识别和响应，触发器才能起作用。通常，我们的心不定的时候，才会有这种凌乱的情况出现，如何静心，各种文化里都有套路：数息、冥想、中心状态训练，本质上都是对觉察能力的训练，提升反省心智的手段。</span>
+</p>
+
+
+<h4 id="toc_18">3. 奖励</h4>
+
+<p class="md_block">
+    <span class="md_line">奖励的部分，最大的问题就是反馈不及时或者是不正确的反馈。前文我已经明确谈到过了，我们所需要的奖励是：认知放松。如果设置错了奖励，就会出现外部动机将内部动机挤走的情况（该问题阳志平老师曾经撰文分析过，文章叫《奖励会伤人》，请自行百度），不仅仅不会让自己更有力量往前走，甚至会放弃做一些事情。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">关于奖励的部分，理解起来并不容易，但是我还是尝试描述一下。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>首先，你必须要知道是什么触发器触发了什么需求而产生了动机。</strong>这个动机的背后对应着是你的什么没有被满足，而导致了认知紧张的状态（强烈推荐大家阅读《思考，快与慢》的第四章和第五章，更好地理解大脑工作机制，就更容易明白是什么控制了自己的认知过程）。然后你要问问自己，这个需求真的是我的需求么？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这里需要补充一段小知识，我们很多的需求（欲望）其实并不是源自我们对价值的追求，而是多巴胺分泌的结果。多巴胺分泌之后，我们就会产生强烈冲动，希望自己得到某事，但是一旦得到之后，多巴胺分泌水平就会回落，而自己并没有得到价值感，就会感到空虚，一旦形成这个循环，TMBRT就会在某个触发器情况下激发多巴胺分泌，比如说看到露胸的妹子就想上1024、看到闪光的按钮就想点击、闻到美味的东西就想多吃几口、听到噼里啪啦的声音就想打麻将……</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果你被原始冲动所掌控，那很容易陷入被无意识的大脑绑架的情况。所以，一定要多问问，自己当下强烈的冲动究竟是价值驱动的，还是多巴胺驱动的，如果是价值驱动的，奖励就是价值本身。说到这里，我要吐槽一下，很多老师在设置活动的时候，都会设置各种奖项、刺激，导致很多学员是为了奖励去学习的。我一直说，成长是成长者最大的奖励，能够激发起学员的学习内驱力，比什么都重要。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>第二，你要能够为自己设置一份真正激励自己的奖励。</strong>这个要比前面的那部分还要难，你要知道什么可以激励自己，那都是未解决的问题、未达成的期待、未满足的兴趣……在没有任何外界逼迫的情况下，能够为自己真正想要的东西去努力，那才是最应该做的事情。这个部分就涉及到方向找寻、目标设定等目标管理的相关内容了，可以直接映射到目标管理的体系中去，这里就不展开了。</span>
+</p>
+
+
+<h4 id="toc_19">4. 行为</h4>
+
+<p class="md_block">
+    <span class="md_line">这个部分已经不用再具体展开了，很多人说行为上出问题，其实，行为有没有问题都是一个结果而已。当知道了行为的原因来自于需求、动机、触发器、奖励，行为的问题就可以解决了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">好了，对这个部分稍微总结一下，如果想要让TMBRT模型发挥作用，就要对每个部分进行深入的了解，这样，才能真正有效地解释各种行为背后的原因、目的和套路，也就能够更好地应对他人对你的套路了，自己也可以用更好的方式去选择自己要投放的行为，让整个结果向更好的方向前进了。</span>
+</p>
+
+
+<h2 id="toc_20">五、最后的话</h2>
+
+<p class="md_block">
+    <span class="md_line">整个TMBRT模型到这里就要结束了，再次强调，它是一个解释工具，可以帮助我们对各类行为进行解释。它还可以应用在更多领域，比如说，当你发现自己总会在同样的问题里掉坑（谈恋爱总是找一样的、各种事情都在同样一个点上失败、想事情总是要往坏里想……）等等，你就可以拿出TMBRT，去问问自己行为背后的需求、动机、触发器、奖励方面的问题，也可以问问自己有没有办法在同样的需求下，选择完全不同的思考、行为方式，让自己的人生变得不同。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">也建议大家多去阅读一些关于心智方面的书籍，比如说《拆掉思维里的墙》、《超越智商》、《活出生命的意义》、《少有人走的路》等等，你都会发现，在触发器下你有更多选择的可能，可以帮助自己在未来更好使用TMBRT来解决行为上的问题，走向高概率成功的未来。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">最后，还是那句话：只要找到机会，就要多练练，分析自己、分析他人都是可以的，这个模型越练越熟，自己对于各种问题的把握和解决就会更驾轻就熟了，那个时候旁人就会评价你：“情商真高、一般的事情都难不住你、我有问题你能帮我解决一下么？”想想也是蛮开心的。</span>
+</p>
+
+
+<h2 id="toc_21">六、参考资料</h2>
+
+<ul>
+<li class="md_li">自我决定论：自我决定论学习资源 <a class="md_compiled" href="http://swordi.com/2014/07/10/sdt/">http://swordi.com/2014/07/10/sdt/</a>
+</li>
+<li class="md_li">书籍：《游戏化实战》、《游戏化思维》、 《目标动力学》、《动机，成就和目标》、《思考，快与慢》、《超越智商》、《决策与判断》
+</li>
+</ul>
+
+<hr>
+
+<h4 id="toc_22">ChangeLog</h4>
+
+<ul>
+<li class="md_li">2017-09-18 完成所有内容的更新 by 易仁永澄
+</li>
+<li class="md_li">2017-09-15 完成前两部分的更新 by 易仁永澄
+</li>
+</ul></div>
+
+
+</div>
+
+
+<div class=" pure-u-0-24 pure-u-sm-0-24 pure-u-md-6-24 pure-u-lg-1-5 pure_cell">
+
+
+<link href="../../fb_static/api/html/auto_toc/auto_toc.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+
+
+
+
+<style type="text/css">.doc_toc_container.affix{ top: 20px }</style>
+
+<div class="doc_toc">
+  <div class="doc_toc_container">
+    <div class="nav"><ul>
+<li>
+<a href="tmbrt.html#toc_0">TMBRT-甜面包热汤模型</a>
+<ul>
+<li>
+<a href="tmbrt.html#toc_1">〇、引言</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_2">一、TMBRT模型简介</a>
+<ul>
+<li>
+<a href="tmbrt.html#toc_3">（一）基本释义</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_4">（二）应用范例1：暴躁的脾气</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_5">（三）应用范例2：常常被人蛊惑</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="tmbrt.html#toc_6">二、TMBRT模型的原理详解</a>
+<ul>
+<li>
+<a href="tmbrt.html#toc_7">（一）M：动机</a>
+<ul>
+<li>
+<a href="tmbrt.html#toc_8">1. 动机简介</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_9">2. 象与骑象人</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="tmbrt.html#toc_10">（二）T：触发器</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_11">（三）奖励</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="tmbrt.html#toc_12">三、TMBRT的深度原理说明</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_13">四、TMBRT模型的具体应用</a>
+<ul>
+<li>
+<a href="tmbrt.html#toc_14">（一）应用范例</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_15">（二）应用进阶方式</a>
+<ul>
+<li>
+<a href="tmbrt.html#toc_16">1. 动机</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_17">2. 触发器</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_18">3. 奖励</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_19">4. 行为</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="tmbrt.html#toc_20">五、最后的话</a>
+</li>
+<li>
+<a href="tmbrt.html#toc_21">六、参考资料</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="tmbrt.html#toc_22">ChangeLog</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/affix.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/scrollspy.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/api/html/auto_toc/auto_toc.js@version=0.0811"></script>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+<div class="sidebar_clicker click_to_close_sidebar"><span class="bar"></span>
+
+</div>
+
+
+
+
+
+
+
+<style type="text/css">.sidebar {
+    left: 0px;
+    right: auto;
+    border-right: 1px solid #eee;
+
+    width: 250px;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background: #fafafa;
+}
+
+
+
+</style>
+
+
+<script type="text/javascript" src="../../fb_static/api/html/auto_sidebar.js@version=0.0811"></script>
+<link href="../../fb_static/api/html/auto_sidebar.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+<script>run_sidebar("left", 'sidebar', 250, "show");
+</script>
+
+    <script>$(document).ready(function(){
+    var sidebar = $('.index_body'); var current = $('.index_body .active');
+    if (sidebar.length && current.length){ sidebar.scrollTop(current.offset().top - sidebar.height()/2 + 100);}
+})
+</script>
+  </body>
+
+</html>

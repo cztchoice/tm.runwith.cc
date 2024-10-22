@@ -1,0 +1,922 @@
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <head>
+<script type="text/javascript" src="../../fb_static/lib/jquery.js@version=0.0811"></script>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>理解层次</title>
+
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta name="renderer" content="webkit">
+
+<link href="../../fb_static/lib/pure.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/pure_patch.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/markdown/basic.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../template/style.scss@app=wiki%252Ffit.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">body {margin-left: 250px}
+.index {width: 250px}
+
+</style>
+  </head>
+
+  <body>
+
+
+    <div class="sidebar">
+      <div class="sidebar_body">
+        <div class="index">
+          <ul class="index_body">
+            <li class="title"><a href="../../index.html">易仁永澄的模型库</a>
+
+            </li>
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>1</b> 思维方式</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../si-wei-fang-shi/value.html"  title="价值思维"  class="link_in_site"><b>1.1</b> 价值思维</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../si-wei-fang-shi/system.html"  title="系统思维"  class="link_in_site"><b>1.2</b> 系统思维</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>2</b> 框架模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="goldencircle.html"  title="黄金思维圈"  class="link_in_site"><b>2.1</b> 黄金思维圈</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="zhexue.html"  title="哲学+问题"  class="link_in_site"><b>2.2</b> 哲学+问题</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="cip.html"  title="CIP：认知信息加工理论"  class="link_in_site"><b>2.3</b> CIP：认知信息加工理论</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item active" >
+
+<a href="nl6l.html"  title="理解层次"  class="link_in_site"><b>2.4</b> 理解层次</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>3</b> 技术模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../ji-zhu-mo-xing/tmbrt.html"  title="TMBRT-甜面包热汤模型"  class="link_in_site"><b>3.1</b> TMBRT-甜面包热汤模型</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../ji-zhu-mo-xing/dualcoredriverengine.html"  title="双核自驱引擎"  class="link_in_site"><b>3.2</b> 双核自驱引擎</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>4</b> 永澄暗箱</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../yong-cheng-an-xiang/pgossystemdynamicanalysis.html"  title="“个人成长操作系统”系统动力分析原理"  class="link_in_site"><b>4.1</b> “个人成长操作系统”系统动力分析原理</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+<div id="search_bar">
+
+
+  <input id="search_posts_keywords" placeholder="Search"  type="text" value="" />
+
+</div>
+
+
+
+<script>var search_base_url = "/";
+var search_under = "";
+$(document).ready(function() {
+    var search_posts_dom = $('#search_posts_keywords');
+    search_posts_dom.val("");
+
+    if (location.search.indexOf('?s=') === 0 && search_posts_dom.length) {
+          var old_keywords = search_posts_dom.val();
+          search_posts_dom.focus().val(old_keywords);
+    }
+    var search_posts = function(){
+        var keywords = search_posts_dom.val();
+        var url_to_jump = location.protocol + '//' + location.host + search_base_url + '?s=' + keywords;
+        if (search_under){ url_to_jump += "&under="+search_under}
+        location.href = url_to_jump;
+        return false
+    };
+
+    search_posts_dom.keyup(function(event) {
+          if (event.which === 13) {
+            search_posts()
+          }
+          return false;
+    });
+
+    $('.search_in_html_button').click(search_posts);
+})
+</script>
+
+
+
+
+
+    <div class="content">
+      <div class="content_body">
+        <h2 class="post_title">理解层次</h2>
+
+
+
+
+<div class="pure-g">
+
+
+
+<div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure-u-lg-4-5 pure_cell">
+
+
+        <div class="post_body markdown"><h2 id="toc_1">〇、引言</h2>
+
+<p class="md_block">
+    <span class="md_line">理解层次（Neuro-Logical Levels），也被称为理解六层次、逻辑层次模型，由于它有六个不同层级，因此，也经常被称为NL6L，或者被简写为6L模型。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../框架模型/_image/nl6l-01.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">上图是我用在“做自己的CEO”课程讲解中的示意图。这个模型自上而下地分为了六个不同层次，各个层次所关注的问题在图上也有标注。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这个模型不像黄金思维圈、GROW等模型应用的广泛，因为它主要在NLP领域中广为人知，由于市场上的NLP从业者鱼龙混杂，导致很多人对NLP有错误的认识，因而限制了模型的传播。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">你知道这个模型有多重要么？我回顾了一下我和这个模型的关系，我发现它被我应用在：持续动力调整、假设体系构建、反思、中长期目标制定、系统动力分析、个人成果库建设、如何有效获得改变、咨询时的洞察、他人能力水平判断、问题解决、意义追寻等领域。看到了么，这么多领域都在应用，早学早享受复利效应！</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">关于6L，我希望能够向你介绍以下内容：</span>
+</p>
+
+
+<ul>
+<li class="md_li">它的起源以及创始人的地位说明；
+</li>
+<li class="md_li">每个层次的元素介绍；
+</li>
+<li class="md_li">该模型对应的助人领域划分介绍；
+</li>
+<li class="md_li">该模型在动力调整上的应用；
+</li>
+<li class="md_li">该模型在目标制定上的应用；
+</li>
+<li class="md_li">该模型在假设体系构建上的应用；
+</li>
+<li class="md_li">反思实例：如何解决“怕丢人”问题。
+</li>
+</ul>
+
+<h2 id="toc_2">一、起源及创始人</h2>
+
+<p class="md_block">
+    <span class="md_line">理解层次是由罗伯特·迪尔茨（Robert Dilts）原创形成的重要模型。罗伯特·迪尔茨，你可以将他理解为NLP界的乔布斯（他也是乔布斯的私人教练）。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../框架模型/_image/nl6l-02.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">他原创发明了若干NLP高级技巧，例如：<strong>系统NLP、逻辑层次、重塑印记法、整合互相矛盾信念的技巧、巧妙应对术、串生词策略、消除过敏技巧、信念变换循环、生生不息的NLP模式、NLP的统一场论</strong>等等。要知道，一个逻辑层次就给我带来了无限的动力，更何况其他的方法。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">他是美国NLP大学的执行长，作为NLP界的首席学府，数十年间，育人无数，世界各国知名的培训师及治疗师都曾就读于该校。国内比较著名的李中莹老师、张国维老师、戴志强老师、黄国团老师都曾多次向他求学。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">此外，他还以自己的力量，拯救了原来不被心理学界看重的NLP技术。早期的NLP，由加州大学语言系的副教授约翰·格瑞德和计算机系的学生理查·班德勒研究创建，但是由于两个人为人处世方式，让NLP沦为商业技巧/工具，不被心理治疗界看好。而同在加州大学的罗伯特·迪尔茨，凭着他天才的智慧、严谨的治学和巨大的热情，从原有NLP的雏形中不断研究发展出现今NLP大半的技巧，他也成为NLP学界唯一被世界心理治疗大会邀请的老师，这是极不容易的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">在全世界范围内，迪尔茨为各种专业团体和组织进行领导和组织发展方面的教练、咨询和培训工作，客户包括：苹果电脑、惠普、IBM、世界银行、意大利航空公司、意大利电信、卢卡斯电影有限公司、美国培训发展协会……除了率先把NLP应用于商业、教育、创造力开发、健康、领导力培养之外，他还对NLP领域的发展作出特别贡献，其中包括开设NLP策略和信念系统技巧的工作坊、开发著名的系统NLP等。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">毫不夸张的说，没有罗伯特·迪尔茨，就没有NLP的今天，而他也是全球NLP领域的殿堂级人物。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">（本部分内容编辑自李中莹的博文：<a class="md_compiled" href="http://blog.sina.com.cn/s/blog_b1ee3f600102vn2c.html">《罗伯特·迪尔茨：NLP的殿堂级人物</a>》）</span>
+</p>
+
+
+<h2 id="toc_3">二、“理解层次”各层次元素介绍</h2>
+
+<p class="md_block">
+    <span class="md_line">理解层次是罗伯特·迪尔茨在1991年推出的一套模型，它是一种<strong>层次化的解释系统、决策指导系统</strong>，可以用来解释各种发生的现象、问题、表现，同时还可以凭借它找到解决问题、优化表现的方法。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这是一套稳定的六层概念组成的模式（Pattern），说到模式就必须要谈到识别，模式就是用来被识别的。<strong>理解层次的6个层次中都包含若干概念，对这些概念的掌握，就可以帮助自己在结果发生时，可以快速提取属性、萃取概念，进行模式识别，大幅度提升理解效率。</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">以此看看六个层次中的概念内容，自上而下地来看。</span>
+</p>
+
+
+<h3 id="toc_4">（一）L1：系统/精神层</h3>
+
+<p class="md_block">
+    <span class="md_line">这个层次中要考虑自己和对象的关系，由于“对象”有大小，所以这个层次也是可大可小，如果我们讨论的是自己和世界的关系，那这个层次考虑的就是世界观，如果考虑的是家庭，那这里谈论的就是自己和家庭的关系。在很多其他人解释中，将这个层次称为“精神”层次，让人很难理解，那么，为什么这个层次被称为“系统”呢？如果你明白元素、关系都是系统的要素，就可以理解了。总结一句，这个部分要求我们不断澄清自己的世界观，因为6L是自上而下统领，越是能够澄清自己的三观体系，越容易让整个模型稳定发挥作用。</span>
+</p>
+
+
+<h3 id="toc_5">（二）L2：身份层</h3>
+
+<p class="md_block">
+    <span class="md_line">这个层次中要考虑自己是谁，这个对“Who”的探讨是基于L1层而言的，比如说你和职业的系统、你和爱人的系统，这两个系统内你的身份是不同的。在这个层次中，最高维度可以考虑到人生观、自己和世界互动方式等问题，基本维度上就是考虑某个领域身份以及处事标准的问题。澄清身份，有助于自身责任力量最大化地发挥（责任=身份+标准+行动），也有助于为自己明确自己的发展方向、愿景和目标。澄清自己的身份，只需要一个问题：“我是谁？”，随着身份的不断明确，由身份带来的力量就会越强大，想想看，“我是一个学习者”和“我是中国最懂得思考的、最能够将学习和价值生产结合的终身学习者”，这两个身份之间给人带来的力量感受差距是巨大的。</span>
+</p>
+
+
+<h3 id="toc_6">（三）L3：信念和价值层</h3>
+
+<p class="md_block">
+    <span class="md_line">这个层次要考虑在某一种身份下的信念、价值和规则（Beliefs,Values &amp; Rules，以下简称BVR）当你的身份确定之后，你就要不断澄清自己的信念（你坚信什么就是这样），并且为自己的信念而努力、做出选择；价值是自己判断某一件事重要与否的理由，它必须以核心价值观为基本原则，然后根据某一件事情的具体情况来判断，你的价值选择都必须要为你的身份加分才行；规则为我们限定了底限和边界，指导我们前行不要误入歧途。很多人谈到关于人生原则的问题，通常也是在这一层次的考虑，原则可以是某一些BVR的组合，通常刻画出这种身份的特点。</span>
+</p>
+
+
+<h3 id="toc_7">（四）L4：能力层</h3>
+
+<p class="md_block">
+    <span class="md_line">不同身份除了有不同的BVR之外，还有不同的能力，能力决定着某一种身份上能够实现什么。说到这里就要再简单谈谈身份和能力的关系，如果你明确了身份，就会知道自己应该学习哪些知识、提升哪些技能；如果身份不清，根据外部环境的变化而被动提升能力，假如提升了10种能力，而未来的某一种身份里只能用到其中的3种，其他的能力对这种身份的增益效果就损失了，成长效率就会大幅度降低。这也给很多人以启示：在选择学习目标之前，问问自己是谁以及这个分身下的BVR，这对于降低焦虑感很有帮助的。</span>
+</p>
+
+
+<h3 id="toc_8">（五） L5：行为层</h3>
+
+<p class="md_block">
+    <span class="md_line">行为层是你具体做事的表现。人生是个复杂系统，理解层次也是上线彼此构建的，行为受制于身份、也反作用于能力，进而影响到你的身份。借助黄金思维圈模型思考，行为处于What层面，如果你只在What层面努力，更高概率地陷入果上努力的困境，各种问题将会多发、成长效率会大幅度降低。所以，在日常关注每一个行为的表现，反思某一种行为背后的模式，努力突破一些固有模式锁定效应，让自己上下打通，不内耗。从另外的角度来说，我们分析问题的时候，也通常会从行为层面切入，因为，行为是唯一表现在外部的，持续训练可以帮助我们对行为背后的身份、价值、信念、能力等进行分析。</span>
+</p>
+
+
+<h3 id="toc_9">（六）L6：环境层</h3>
+
+<p class="md_block">
+    <span class="md_line">最后一个层次需要考虑的内容很多，我们通常考虑环境，会考虑到身边的人事物、各种信息、平台……每个人都生活在环境中，我们初始模式的形成就是和环境互动的结果，环境可能会影响我们确定身份、人生目标，也可能因为环境而放纵了自己的行为。佛家说因缘际会的“缘”就是环境、外部原因，做为结果产生的重要原因，我们必须注重自己和环境的关系。还是那个观点，必须先从顶端开始确立自己身份，然后不断向下层思考，让自己不受制环境而是将环境变成资源加以利用。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">理解层次要求我们以上统下，看上去有点难，对于很多靠直觉生活的人来说，根本没有办法上手。可是，高价值的成长策略都是反直觉的，我建议我的伙伴选择高价值的成长方式，而不是让自己爽的方式。</span>
+</p>
+
+
+<h2 id="toc_10">N-1、反思实例：如何解决“怕丢人”问题。</h2>
+
+<h3 id="toc_11">（一）触发器</h3>
+
+<p class="md_block">
+    <span class="md_line">2002年7月，我信心满满地从考场出来，因为我的英语成绩从来没有低于145分过，换算成100分的卷子，最少也是98分。信心是在反复实践中建立的，果然，成绩到手一看，147分！</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">15年后的今天，我在给梓畅和晓沐讲大脑运作<strong>模式</strong>原理的时候，本想让她们感受一下认知冲突，但是却卡住了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../框架模型/_image/nl6l-03.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">图片里的每个单词，我都可以轻松地念出来，可是，我还是像往常一样，<strong>遇到需要读出来的英文，就扔到一边</strong>。<br /></span>
+    <span class="md_line">梓畅笑我说：“怎么了，怎么了，为啥不念了呢？”<br /></span>
+    <span class="md_line">我<strong>笑着</strong>说：“我想起了北海公园的画面。”这句话刚说出口，我突然发现：<strong>自己陷入在第一反应的模式中了</strong>，这个模式是：每当遇到刺激为“阅读英文内容”，我的响应就是“顾左右而言他”。<br /></span>
+    <span class="md_line">想到这里，身上就一阵冷汗，我竟然被这个模式绑架了15年，让我从一个英语尖子生，变成了现在的恐慌者。必须要抓紧反思，打破这个固有模式。</span>
+</p>
+
+
+<h3 id="toc_12">（二）难以忘怀的故事</h3>
+
+<p class="md_block">
+    <span class="md_line">上大学的第二年，我找了个女朋友，她叫小U。她是我的老乡，跟我一个学校，读的是英语语言文学专业，粗暴点说就是“专业是学英语的”。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">在一起的时候，我们就跑去北海公园玩。作为大北京的著名景点，每个景观都有个牌子介绍此处的基本情况，每个牌子上有中文也有英文。也不知道是兴奋还是爱显摆（又发现一个模式），我到了一个景点就对她念出英文……</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">开始，小U只是笑笑，后来突然没有忍住，说了一句：<strong>“你这个威海英语发音不对啊。”</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">听到这句话，<strong>我也不知道心里想着什么</strong>，就是觉得一阵阵的不好意思、尴尬，但是，<strong>为了掩饰，我还是假装嬉皮笑脸的样子</strong>。果然，事情就过去了。（理解这段我标粗原因的伙伴，请关联TMBRT模型生成模式的原理）</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">之后有一天，我们恰好都在一号教学楼上课，下课之后，我就叫她一起上自习，我们就在楼下的核桃林见面，远远地，我看着小U和她舍友一起走过来。我想自己也不差，平时也没有和她们见过面，就主动迎上去，果然，她们都对我印象还蛮好的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">一起走了一会，她的舍友其中一人就问我：“你是学什么专业的？”我也不知道脑子哪根弦搭错了（又是一种模式），竟然用英文回答了她们！！！</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">在我将TV的“V”发音为vei之后，她们全部都笑了，小U跑过来跟我说：“那个不读vei，读vi，你这个威海英语啊。”</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">我立刻哈哈哈大笑起来：“我跟你们开玩笑啊，要不怎么打入到你们内部呢？”说完，拉着小U就跑走了，而那一天的自习我整个人都游离了，总是静不下心来。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">从那之后，我再也没有公开念过英语，“听说读写”其中一枝受损，竟然导致整个英文全面崩盘，一直崩到梓畅跟我开玩笑。</span>
+</p>
+
+
+<h3 id="toc_13">（三）模式分析：怕丢人</h3>
+
+<p class="md_block">
+    <span class="md_line">我不是没有发现自己有这个情况：在这15年里，但凡用到英语的地方，我就会想到这两幅画面。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">因为我的内在模式有一个积极动力，所以，我也尝试着用过各种方法解决：用扇贝网背单词超过500天、每天练习一个英语句式、完成新概念四册内容的背诵，后来发现自己都在“听写读”上努力，还尝试着去参加了美语英语发音班。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">可是，由于我可以很容易读懂英文文献，在缺乏价值激励和相关动机的情况下，我越来越不讲英文了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">那么，<strong>这两个故事就是导致我成为英语瘸腿者的原因吧！</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">错！这是单因果关系，一个深度反思者绝不会满足于单因果关系，必须要问问自己：<strong>为什么出了错我就不敢说英语了呢？</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">人的底层情绪有爱和怕两种，“出错就不说英语”这明显是系统1在起作用，一定是和情绪绑定在一起的，那么，这个结果的出现，一定是我在害怕什么。<br /></span>
+    <span class="md_line">我在怕什么？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">一个答案冒出来：<strong>怕丢人</strong>。</span>
+</p>
+
+
+<h3 id="toc_14">（四）联想：我的惧怕</h3>
+
+<p class="md_block">
+    <span class="md_line">想到这里忽然想到昨天晚上发生的事情。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">昨天下午，我和公司同事开会，讨论2018年年度目标的课程安排，我拟定安排“目标制定”和“目标达成辅助”两类课程活动，并且将营收目标确定在60-100万之间。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">开完会出门之后，迎着冷风，我有一种莫名的恐惧，于是我赶紧去双核群里找温暖。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../框架模型/_image/nl6l-04.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">昨晚在反思究竟恐慌的是什么，我并没有得到答案。正如元元姐说的那样：<strong>在个人目标管理领域，我不敢说是全国第一名，但是一定是第一梯队的，无论从实践时间、理论深度、应用灵活程度、问题解决精准度等环节都有充足的积累</strong>，我有什么不敢的呢？<br /></span>
+    <span class="md_line">现在突然明白了，原来是<strong>怕丢人：因为我知道我还有做得不足的地方，我需要不断改进的地方，但是，因为自己觉得不够好，所以，生怕做完了丢人</strong>。<br /></span>
+    <span class="md_line">想到这里我也想明白了，我总是期待给我的用户提供最完整的体系、一旦我成长了，我就想把原来的产品更换掉，因为我已经不满意产品了。可是，这却导致我的产品总是难以定型，运营压力很大，小伙伴们总是在这个部分给我提意见。之所以我会这样做，就是因为“怕丢人”这个模式在起作用，它主导着我的决策，而我的系统2却没有发现。<br /></span>
+    <span class="md_line">如果说，优化产品是给自己增光添彩，那拖延就真的是“怕丢人”带来的负面表现了。比如说8月份的《跃迁》共读领读活动，我就发现自己总是在各个环节都有拖延的情况，想要开始做事情的时候，就坐立不安、不知如何是好了，时间就大把大把地流逝了。想想看，确实想要完美，但是，更打动我自己的还是“怕丢人”。</span>
+</p>
+
+
+<h3 id="toc_15">（五）区分模式的关键</h3>
+
+<p class="md_block">
+    <span class="md_line">“怕丢人不是好事么？正因为一个人要脸面，所以，才会去努力啊，你看我就没有这种模式，总是没羞没臊的，也不管别人怎么想，就做好我自己的事情。”梓畅向我问出这个问题。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">我看了下系统动力分析的流程图，在模式上有一个关键指标：耗损。如果说一个模式总是让你<strong>耗损</strong>，它的运转结果会损耗大量的能量、意志力，那它就不是一个好的模式。<strong>模式分好坏，关键看耗损！</strong><br /></span>
+    <span class="md_line">怕丢人确实可以给我带来很强的动力，让我不满足于当下，让我不断去提升自己，可是，这种模式在理解层次的角度来看，它是一种自下而上的思考模式，虽然有时候有用，但是它还是给我带来了各种损耗，比如说：恐惧、拖延、完美主义……</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">那这个模式肯定有问题，至少，按照理解层次我应该自上而下地思考，去澄清我究竟是谁、我的信念体系是什么，然后用更好的、更自然的、更平和的模式来让自己持续昂扬向上。</span>
+</p>
+
+
+<h3 id="toc_16">（六）原理分析</h3>
+
+<p class="md_block">
+    <span class="md_line">模式是由TMBRT模型持续作用而成的，多年以来形成的固定模式很难更改的，这就是我的第一反应。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">但是，我如果没有发现那就算了，在之前没有发现的15年里，它也确实控制了我15年。可是，现在我已经觉察到它的存在了，那必须用刻意练习的方式，把这个错误模式更换掉。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">模式更换有两种方式：“向过去”和“向未来”。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>“向过去”的方式</strong>，是分析模式产生的原因，一层层地剥开、一层层地分析，通常这都是心理咨询师的逻辑，找到让你产生“怕丢人”的原因：比如说孩童时期，家庭教育总是说“你这个做不好别人会看不起你的”，于是，我们就把自己的表现和他人眼中的自己进行了绑定，明明是应该为了自己，却为了他人是否看得起自己而努力了；还比如说有的家庭教育不断要求孩子再好一点、再好一点，而不是发挥热情和天赋，导致孩子形成优秀的扭曲。心理咨询师找到了模式的起因，然后帮助你更换掉那些错误的信念（见理解层次第三层），再建立新的模式就好了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>“向未来”的方式</strong>，是考虑如何跳过现有模式，直接采用新的模式来替代的处理方式，这通常都是教练的逻辑，找到全新路径去走。比如说，使用理解层次重新梳理：身份-信念，然后为自己设置新的触发器，在新的刺激出现之后，直接使用全新的方式来推进行动，通过刻意练习，形成新的模式来取代过去。</span>
+</p>
+
+
+<h3 id="toc_17">（七）改变的方法</h3>
+
+<p class="md_block">
+    <span class="md_line">过去不能改变，但是我们可以改变对过去的评价，方法只有一个：把未来过好。所以，我选择后者，再次调用理解层次形成全新模式如下：</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_blockquote">
+    <span class="md_line">触发器：当我再次感到难为情、怕做不好、完美主义的时候。响应机制：启动下面清单。</span>
+</p>
+
+
+<blockquote>
+
+<p class="md_block">
+    <span class="md_line">嘿，永澄，看你又在害怕和恐惧了是不是？来来来，我知道你有这个情况，所以提前给你了个锦囊，让我们转危为安吧。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>关系：</strong>你知道么，你之所以有情绪，是因为面临着挑战，那件事情超出你的能力范围了，你又获得了一个成长大机会了。在这个挑战中，你因为担心自己做不好，而有情绪波动，我们先把情绪放下，来看看我们在什么系统中：系统里有你、挑战、别人的评价。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>身份：</strong>你要知道你是谁，这很重要，因为它将给你带来锚定。从三观的角度来看，你是一个求真者，求真就是成为一个不断变得更好的人，不断向高手靠近的人，面临挑战会让你更能够成为这样的人。在这个身份下，你真的要关注问题，而不是逃避，用你最厉害的反思能力去面对挑战带来的冲击吧。此外，你还是一个演员，你正在扮演着自己，让这个“被扮演者”去体验，让你这个“演员”去观察不是很好么？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"><strong>信念：</strong>既然做为一个求真者、应对挑战的人，那你就要知道，身在挑战过程中，其实并不见得那么容易的。那么，请把这些信念读读吧：<br /></span>
+    <span class="md_line"> - 我拥有着成长型心智<br /></span>
+    <span class="md_line"> - 任何问题都是成长的契机和基石<br /></span>
+    <span class="md_line"> - 别人评价我好不好并不影响我的客观存在，我要变得更好来自于持续挑战，我要变好来自于改进暴露出的问题<br /></span>
+    <span class="md_line"> -  怕，来自于担心失去，这是“果上努力”，要关注自己的影响圈<br /></span>
+    <span class="md_line"> - 一切杀不死我的都会让我强大<br /></span>
+    <span class="md_line"> - 嘿，情绪脑，你的身体受伤害了么？没有的话请把身体的控制权交给功能脑吧<br /></span>
+    <span class="md_line"> - 体验是人生最重要的组成部分，投身其中、抽身观察，充分享受<br /></span>
+    <span class="md_line"> - BTAFE<br /></span>
+    <span class="md_line"> - 至少你的价值被积累了</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"> <strong>能力：</strong>你难道不知道你是一个很高级的成长者么？这个身份虽然没有在前面说明，但是，这个身份里隐含着各种能力，比如说：<br /></span>
+    <span class="md_line"> -  信息组块化能力，你可以用模型将灵感进行结构化；<br /></span>
+    <span class="md_line"> -  系统思考的能力，在多个元素中你可以找到关系和关键抓手；<br /></span>
+    <span class="md_line"> - 使用目标达成术将你的灵感转化成可以推进的任务；<br /></span>
+    <span class="md_line"> - 项目管理的能力，你可以将任务分阶段思考和推进；<br /></span>
+    <span class="md_line"> - 大量个人成长的积累，你在自己的能力圈里呢，你不觉得自己厉害，但是别人并不这么想；</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"> <strong>行动：</strong>既然你身份明确、信念坚定、能力突出，我们考虑的一定是那个你认为最难的部分了，正是它在限制你的能力发挥，解决掉它，我们的动力就能从内耗集中到推进任务上了。所以，现在，你要做的是，拿出一支笔，把脑海中的所有好的、坏的都写下来。写完了如果觉得还有问题，赶紧打开“双核自驱引擎”的群，让小伙伴们给予力量吧！</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line"> <strong>环境：</strong>我有梓畅大法师做为合伙人帮我平复，有团队和我一起搞搞搞，有秀燕可以推进任务帮我弥补我的不足，有核心小伙伴为我出谋划策，我的人品不坏很多高手老师都愿意帮助我。<br /></span>
+    <span class="md_line">写完了之后我读了一遍，感觉特别想推进年度目标的课程，甚至想跟大家说说英语了~</span>
+</p>
+
+</blockquote>
+
+<h2 id="toc_18">N、参考资料</h2>
+
+<ul>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247486369&idx=1&sn=6e72993af0693e36ad700cae344ec6cd&chksm=e927a3f8de502aee0654320065c3005ac04145156b40de8c22ac4d9aca8e67a1842d05297a8a#rd">《无敌的洞察力：理解层次模型》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="http://blog.sina.com.cn/s/blog_b1ee3f600102vn2c.html"> 《罗伯特·迪尔茨：NLP的殿堂级人物》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="http://tm.runwith.cc/read/kuang-jia-mo-xing/%E5%8F%8D%E6%80%9D%E5%AE%9E%E4%BE%8B%EF%BC%9A%E9%AB%98%E8%80%83%E8%8B%B1%E8%AF%AD147%E5%88%86%E7%9A%84%E4%B8%8B%E5%9C%BA">反思实例：高考英语147分的下场</a>
+</li>
+</ul>
+
+<hr>
+
+<p class="md_block">
+    <span class="md_line">其他内容<br /></span>
+    <span class="md_line">一直想写理解层次这个模型，但是，实话实说，我没有那么强的能力把这个模型的功能表达清楚。六个层次至少就是六个元素，它们虽然被上下地排列在一起，但是两两组合、两两促进、两两制约、三三组合、三三……还有就是跨层次的关系等，可以形成的理解能力范围广泛且深入；而它还可以应用在无数领域中，而我只是熟悉个人成长这个领域。<br /></span>
+    <span class="md_line">不过，总不要等到完美才开始吧，越是将其显性化，它也就越能构建我。这个系列也不是那么容易理解，不过，千万不要因为我的写作能力而阻碍了你去和这个模型在一起，拿到生活里去尝试一下，你会发现自己的理解力、洞察力会瞬间暴涨，有感觉了记得跟我交流。</span>
+</p>
+
+
+<hr>
+
+<h2 id="toc_19">ChangeLog</h2>
+
+<ul>
+<li class="md_li">2017-11-13 更新起源、创始人、元素介绍部分 by 易仁永澄
+</li>
+</ul></div>
+
+
+</div>
+
+
+<div class=" pure-u-0-24 pure-u-sm-0-24 pure-u-md-6-24 pure-u-lg-1-5 pure_cell">
+
+
+<link href="../../fb_static/api/html/auto_toc/auto_toc.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+
+
+
+
+<style type="text/css">.doc_toc_container.affix{ top: 20px }</style>
+
+<div class="doc_toc">
+  <div class="doc_toc_container">
+    <div class="nav"><ul>
+<li>
+<a href="nl6l.html#toc_0">理解层次</a>
+<ul>
+<li>
+<a href="nl6l.html#toc_1">〇、引言</a>
+</li>
+<li>
+<a href="nl6l.html#toc_2">一、起源及创始人</a>
+</li>
+<li>
+<a href="nl6l.html#toc_3">二、“理解层次”各层次元素介绍</a>
+<ul>
+<li>
+<a href="nl6l.html#toc_4">（一）L1：系统/精神层</a>
+</li>
+<li>
+<a href="nl6l.html#toc_5">（二）L2：身份层</a>
+</li>
+<li>
+<a href="nl6l.html#toc_6">（三）L3：信念和价值层</a>
+</li>
+<li>
+<a href="nl6l.html#toc_7">（四）L4：能力层</a>
+</li>
+<li>
+<a href="nl6l.html#toc_8">（五） L5：行为层</a>
+</li>
+<li>
+<a href="nl6l.html#toc_9">（六）L6：环境层</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="nl6l.html#toc_10">N-1、反思实例：如何解决“怕丢人”问题。</a>
+<ul>
+<li>
+<a href="nl6l.html#toc_11">（一）触发器</a>
+</li>
+<li>
+<a href="nl6l.html#toc_12">（二）难以忘怀的故事</a>
+</li>
+<li>
+<a href="nl6l.html#toc_13">（三）模式分析：怕丢人</a>
+</li>
+<li>
+<a href="nl6l.html#toc_14">（四）联想：我的惧怕</a>
+</li>
+<li>
+<a href="nl6l.html#toc_15">（五）区分模式的关键</a>
+</li>
+<li>
+<a href="nl6l.html#toc_16">（六）原理分析</a>
+</li>
+<li>
+<a href="nl6l.html#toc_17">（七）改变的方法</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="nl6l.html#toc_18">N、参考资料</a>
+</li>
+<li>
+<a href="nl6l.html#toc_19">ChangeLog</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/affix.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/scrollspy.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/api/html/auto_toc/auto_toc.js@version=0.0811"></script>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+<div class="sidebar_clicker click_to_close_sidebar"><span class="bar"></span>
+
+</div>
+
+
+
+
+
+
+
+<style type="text/css">.sidebar {
+    left: 0px;
+    right: auto;
+    border-right: 1px solid #eee;
+
+    width: 250px;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background: #fafafa;
+}
+
+
+
+</style>
+
+
+<script type="text/javascript" src="../../fb_static/api/html/auto_sidebar.js@version=0.0811"></script>
+<link href="../../fb_static/api/html/auto_sidebar.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+<script>run_sidebar("left", 'sidebar', 250, "show");
+</script>
+
+    <script>$(document).ready(function(){
+    var sidebar = $('.index_body'); var current = $('.index_body .active');
+    if (sidebar.length && current.length){ sidebar.scrollTop(current.offset().top - sidebar.height()/2 + 100);}
+})
+</script>
+  </body>
+
+</html>

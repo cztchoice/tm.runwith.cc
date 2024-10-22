@@ -1,0 +1,1185 @@
+
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <head>
+<script type="text/javascript" src="../../fb_static/lib/jquery.js@version=0.0811"></script>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>“个人成长操作系统”系统动力分析原理</title>
+
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta name="renderer" content="webkit">
+
+<link href="../../fb_static/lib/pure.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/pure_patch.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../fb_static/lib/markdown/basic.css@version=0.0811.css" type="text/css" rel="stylesheet"/><link href="../../template/style.scss@app=wiki%252Ffit.css" type="text/css" rel="stylesheet"/>
+
+    <style type="text/css">body {margin-left: 250px}
+.index {width: 250px}
+
+</style>
+  </head>
+
+  <body>
+
+
+    <div class="sidebar">
+      <div class="sidebar_body">
+        <div class="index">
+          <ul class="index_body">
+            <li class="title"><a href="../../index.html">易仁永澄的模型库</a>
+
+            </li>
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>1</b> 思维方式</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../si-wei-fang-shi/value.html"  title="价值思维"  class="link_in_site"><b>1.1</b> 价值思维</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../si-wei-fang-shi/system.html"  title="系统思维"  class="link_in_site"><b>1.2</b> 系统思维</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>2</b> 框架模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/goldencircle.html"  title="黄金思维圈"  class="link_in_site"><b>2.1</b> 黄金思维圈</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/zhexue.html"  title="哲学+问题"  class="link_in_site"><b>2.2</b> 哲学+问题</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/cip.html"  title="CIP：认知信息加工理论"  class="link_in_site"><b>2.3</b> CIP：认知信息加工理论</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../kuang-jia-mo-xing/nl6l.html"  title="理解层次"  class="link_in_site"><b>2.4</b> 理解层次</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>3</b> 技术模型</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item" >
+
+<a href="../ji-zhu-mo-xing/tmbrt.html"  title="TMBRT-甜面包热汤模型"  class="link_in_site"><b>3.1</b> TMBRT-甜面包热汤模型</a>
+
+
+
+    </li>
+
+
+
+
+
+
+
+    <li class="item" >
+
+<a href="../ji-zhu-mo-xing/dualcoredriverengine.html"  title="双核自驱引擎"  class="link_in_site"><b>3.2</b> 双核自驱引擎</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="item" >
+      <div class="folder_caption"><b>4</b> 永澄暗箱</div>
+
+
+
+
+            <ul class="articles">
+
+
+
+    <li class="item active" >
+
+<a href="pgossystemdynamicanalysis.html"  title="“个人成长操作系统”系统动力分析原理"  class="link_in_site"><b>4.1</b> “个人成长操作系统”系统动力分析原理</a>
+
+
+
+    </li>
+
+
+
+
+            </ul>
+
+
+
+
+    </li>
+
+
+
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+<div id="search_bar">
+
+
+  <input id="search_posts_keywords" placeholder="Search"  type="text" value="" />
+
+</div>
+
+
+
+<script>var search_base_url = "/";
+var search_under = "";
+$(document).ready(function() {
+    var search_posts_dom = $('#search_posts_keywords');
+    search_posts_dom.val("");
+
+    if (location.search.indexOf('?s=') === 0 && search_posts_dom.length) {
+          var old_keywords = search_posts_dom.val();
+          search_posts_dom.focus().val(old_keywords);
+    }
+    var search_posts = function(){
+        var keywords = search_posts_dom.val();
+        var url_to_jump = location.protocol + '//' + location.host + search_base_url + '?s=' + keywords;
+        if (search_under){ url_to_jump += "&under="+search_under}
+        location.href = url_to_jump;
+        return false
+    };
+
+    search_posts_dom.keyup(function(event) {
+          if (event.which === 13) {
+            search_posts()
+          }
+          return false;
+    });
+
+    $('.search_in_html_button').click(search_posts);
+})
+</script>
+
+
+
+
+
+    <div class="content">
+      <div class="content_body">
+        <h2 class="post_title">“个人成长操作系统”系统动力分析原理</h2>
+
+
+
+
+<div class="pure-g">
+
+
+
+<div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure-u-lg-4-5 pure_cell">
+
+
+        <div class="post_body markdown"><h2 id="toc_1">〇、引言</h2>
+
+<p class="md_block">
+    <span class="md_line">近日，对<a class="md_compiled" href="../ji-zhu-mo-xing/dualcoredriverengine.html">“个人成长操作系统”整个系统</a>的核心动力进行了全面思考，形成了一个系统动力原理分析的流程图，如下图所示：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../永澄暗箱/_image/SDA-01.png" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">图片内容很多，如果想要看到高清大图，请点击链接：<a class="md_compiled" href="https://www.processon.com/view/link/59fc879de4b0d53d9794549f">https://www.processon.com/view/link/59fc879de4b0d53d9794549f</a>。</span>
+</p>
+
+
+<h3 id="toc_2">（一）什么叫动力</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">什么叫<strong>动力</strong>啊？我们可以从一类常见的问题中找到动力的价值：</span>
+</p>
+
+
+<ul>
+<li class="md_li">我怎么感觉一点劲儿都没有啊，不知道是怎么了？
+</li>
+<li class="md_li">明明知道这个问题是因为XX造成的，但是，我就是不想去改变！
+</li>
+<li class="md_li">为什么我不能像别人那么持续，总是断断续续的？
+</li>
+<li class="md_li">我想变好，可是就是不想做事情……
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">上述问题都是因为动力问题导致的，<strong>解决问题只有方法是不够的，必须还要有动力！</strong>所以，如果我想引领职场青年持续高效能成长，虽然给出了一个“个人成长操作系统”作为完备的解决方案，同时也给出了“双核自驱引擎”作为最小可实现的切入点和抓手，但是，如果没有动力，照样会发生各种各样的问题。</span>
+</p>
+
+
+<h3 id="toc_3">（二）本分析的价值</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">系统的<strong>元素</strong>和<em></em>关系<strong>产生</strong>系统功能<em></em>，而系统动力是系统中最重要的关系，本图恰好是对系统动力的分析，当采用动态视角看待分析结果时，你会发现这张图还有更多价值：</span>
+</p>
+
+
+<ul>
+<li class="md_li">如何找到低损耗的动力？如何找到持续高效能个人成长的动力？
+</li>
+<li class="md_li">深度反思方法（左侧）
+</li>
+<li class="md_li">因上努力的多层次心理表征说明（图中间）
+</li>
+<li class="md_li">问题原因深度分析（图中间）
+</li>
+<li class="md_li">假设持续优化方法（图中下）
+</li>
+<li class="md_li">模式识别及分析方法（图中间）
+</li>
+<li class="md_li">个人成长四大要素：解释系统、决策系统、假设体系和反思过程的串联，本图更偏向于我的解释系统
+</li>
+<li class="md_li">多思维模式打通
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">可以说，上述的每一条，作为高阶个人成长者都是必备的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">价值中最后一条“多思维模式打通”，说明图片中涉及到若干思维方法，经过整理主要有以下内容：系统思维、价值思维、系统动力分析、天赋理论、逻辑层次、动机理论、模式识别、三观体系、假设体系等。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">由于涉及内容较多，同时，这是一篇框架性文章（大量细节我并不会进行解释），可预见的是本文的阅读和理解难度应该较大。但是，这个框架是我接访了近400个收费咨询之后形成的复合套路，基本上可以解决绝大多数的成长问题。如果你能明白“暂时理解不了的框架才是最有价值的”，我会耐心等待你实践之后给我的反馈。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">本文我将就图中的<strong>问题原因分析、深度反思过程、模式和动力的关系、低耗损模式</strong>这四个问题进行简单讨论，具体内容如下。</span>
+</p>
+
+
+<h2 id="toc_4">一、问题原因分析原理</h2>
+
+<p class="md_block">
+    <span class="md_line">在谈到世界观的时候，我说世界是这样的模型：<strong>投射端向下投射，在下方形成投射</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../永澄暗箱/_image/SDA-02.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这是一种隐喻，用大俗话说叫做：<strong>因果关系，一切结果皆有因</strong>，此外，我也经常援引佛家用语：<strong>菩萨畏因、众生畏果，因上努力、果上随缘</strong>。来让我们用四个层次看看如何解释“因上努力”：</span>
+</p>
+
+
+<h3 id="toc_5">（一）果上努力</h3>
+
+<p class="md_block">
+    <span class="md_line">我很喜欢这句“因上努力，果上随缘”，因为，绝大多数人在第一反应的作用下，通常会关注“果”，甚至认为只要关注了“果”，“果”就会随着自己的意愿所改变，画成模型就是：<strong>“我的意愿——&gt;果”</strong>，模型画出来就能看出不靠谱了，毕竟我们都知道：果是靠“因”（甚至很多因）产生的。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">果有多种类型（流程图右侧），比如说问题、表现、优势、关系、效能……那么，如何解决问题、优化表现、改善关系、提高效能呢？是在果上努力还是因上努力呢？这个答案不言而喻了。</span>
+</p>
+
+
+<h3 id="toc_6">（二）线性因果关系</h3>
+
+<p class="md_block">
+    <span class="md_line">当不断训练着让自己摆脱了“果上努力”的束缚后，真正来到原因上来，却忽然之间迷茫了：<strong>某件事情发生了，让它发生的原因是什么呢？</strong>通常，人们只能分析一次原因，比如说：今天的工作拖延了（结果），那么原因是什么呢？分析之后发现是畏难情绪，也就是：“畏难——&gt;拖延”，然后就没有然后了……</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这种分析有什么用呢？因为，它陷入了因果关系的第二个坑：<strong>线性（单）因果关系</strong>，在这种观念下：所有的结果只是由一个原因造成的。因为人类的大脑会将“提取容易程度”判断为“重要性”，所以，通常我们会把最容易想到的原因，当成某一个结果的为一个重要结果，比如说：“我明明那么努力，怎么考试分数这么低呢？”“我对你那么好，你怎么能背叛我？”呵呵，好单纯呀。</span>
+</p>
+
+
+<h3 id="toc_7">（三）多因果关系</h3>
+
+<p class="md_block">
+    <span class="md_line">入门了的个人成长者，通常都不会出现“线性因果思维”，他们稍微启动一下反省心智，就会开始判断某一个结果究竟是如何产生的，他们还会用这句高级话术：“还有么？还有其他的原因么？”来帮助自己扩张思路。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">比如说：“你的这篇文章竟然有10万+的阅读量，你是怎么做到的？”回答：“哎呀，我要感谢CCTV、MTV为我颁奖，我要谢谢我的家人、我的老师，我要感谢……，最后，谢谢我的猫没有把我的咖啡碰撒。”</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果还会使用清单的话，可以逐一把原因列写下来；如果还有其他伙伴、引导式、教练存在的情况下，他甚至可以分析出很深刻的原因。至此，就不辜负“成长者”这个称号了！</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">多因果关系可以简单划分为三种：外部因，结果因、后天因，具体解释在后续的“模式和动力的关系”再谈。</span>
+</p>
+
+
+<h3 id="toc_8">（四）结构化因果关系</h3>
+
+<p class="md_block">
+    <span class="md_line">结构化因果关系指的是将原因结构化。当拥有系统思维之后，理解了“元素”之间的“结构”形成系统的“功能”，就会对若干个原因（元素）进行关系化/结构化。结构化本身是一个升维的过程（让杂乱无章的元素在某种XX下形成结构），也是一个归纳的过程。如果升维和归纳到一定高度，甚至和某些原理打通，就很容易在未来相似事件中进行演绎，必将大大提高结果产生效能。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">我在图片上分析了通用的结构化原因，我给出了四个元素：<strong>假设体系、系统动力、模式，外部环境</strong>，前三个是内部原因、后者是外部原因，这些原因之间有着彼此的关系，我在图中已经画出，在“模式和动力的关系”中再深聊。这是通用化的原因分析，在不同问题中，例如成长类、规划类、创业类、团队管理类、营销类问题中，可能要嵌套专业化的结构化原因体系，就请各自积累方案吧。</span>
+</p>
+
+
+<h3 id="toc_9">（五）本部分小结</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">好了，写到这里，我们总结一下关于因上努力的4个层次：</span>
+</p>
+
+
+<ul>
+<li class="md_li">心智未开启：只能果上努力，在果上蝇营狗苟；
+</li>
+<li class="md_li">被情绪控制：随意给出一个原因，只是为了心里放松；
+</li>
+<li class="md_li">入门成长者：不断分析所有可能的原因，并尝试寻找规律；
+</li>
+<li class="md_li">系统思考者：所有结果都是原因系统的输出，原因的结构决定了输出，不被原因束缚，升维到更高视角去理解因果过程。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">注意，这并没有完，上述的划分是站在通用角度谈的，还有更高级的就是在两个方向上再走一步的：第一个方向是心理表征的丰富化，比如你要知道系统动力可以分为高低能耗、知道假设体系有三观、信念、原则、能力、方法等等；第二个方向是专业化的原因体系。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">去往更高级别的原因分析者，其实并不难，各个行业都有，比如说有的小贩卖馅饼可以成为国际连锁企业、有的散户把股市当成取款机、有的英语老师可以搞一个电商平台……他们都掌握一个很重要的能力：<strong>反思能力，并且是深度反思能力</strong>，后文我们继续说。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">上个周参加了刘佳老师的天赋优势课程，仿佛打通了我关于动力的知识体系。之后，我用了三天时间反复讨论形成了这个框架，我用了正向和逆向的方式分别进行了校验，用两个咨询去实践，我发现我咨询精准度直接拉升了一个维度！<br /></span>
+    <span class="md_line">这种知识打通的喜悦感，真是只有自己才能体会，希望能通过本文和你分享。</span>
+</p>
+
+
+<h2 id="toc_10">二、深度反思过程</h2>
+
+<p class="md_block">
+    <span class="md_line">反思的重要性，不需要再累述，如果你问我只做一件事就能成长/创业/发展/提升，这件事是什么，我的答案一定是反思。不过，你有没有发现：越是每个人都知道的概念，越是难以真正掌握，反思就有这个特点。让我们一层层地进入到反思的世界来吧。</span>
+</p>
+
+
+<h3 id="toc_11">（一）不反思，只要认知放松就好了</h3>
+
+<p class="md_block">
+    <span class="md_line">“认知放松度”是卡尼曼提出的一个很重要的认知词汇，从认知放松到认知紧张，消耗的能量会越来越多，这和人类进化而来的“能耗最小原则”直接冲突，因此，<strong>未经过训练的人总是本能地让自己快快回到认知放松的状态</strong>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">认知放松的内在需求，是一个很强的动力源，它驱动我们做出很多行为，比如说“归因需求”就是由这种动力驱动的。由于这种动力是本能带来的，所以，我们总是会放弃思考而直接采取行动，因此总是陷入直觉导致的错误中。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">看个例子：路上摔了一跤（Trigger），你站起身来说：“真倒霉”（Behavior）。这个非常简单的触发器和行为响应的小例子，充分看出“认知放松度”这个固有模式带来的强大动力：摔跤了，我们会觉得很丢脸（情绪是认知紧张的一种反映），于是内部动机（motivation）出现，自己期待赶紧进入认知放松状态。于是，根据第一反应（也是固有模式）投放一个解决方案，让自己认知放松度需求得以满足，就是给自己最大的奖励。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">从上面例子看到，很多人在遇到问题而带来了认知紧张的时候，会随意投放解决方案：大吵大闹、假装看不到/听不见、鄙视对方说对方傻、自己说服自己只有自己是对的……</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">确实带来了认知放松，但是这种“结果”，只能让自己获得“没有压力”的短期收益——自我欺骗，而不去思考“原因”，更别说“多层次、结构化原因”，长期来看将把自己被锁死在一个很低的水平中，头顶隐形的天花板将无法突破。</span>
+</p>
+
+
+<h3 id="toc_12">（二）反思新人：知道反思很重要，但是不会用</h3>
+
+<p class="md_block">
+    <span class="md_line">基于“认知-认同-践行”来看，即便已经对反思有了认知、也认同这是很好的套路，但是总是一践行就被卡住，你会发现：看上去简单的东西还真是不会用啊。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">在被困住的时候，自己就很容易掉到Level1阶段，随意下了个结论：“诶，这个技术我是学不会的吧”、“只有少数人才能掌握吧？”、“他们说反思有用，都是忽悠的吧？”……因此，能量在Lever1和2之间不断爬上来、掉下去中被消耗殆尽。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">此外，这个层次的伙伴有点<strong>分不清楚记录、总结、回顾、反思</strong>。我最近要求“做自己的CEO”的小伙伴做每天一反思活动，随着每天的深入，我发现大家普遍出现这个问题：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>记录</strong>：有的人会把已经发生的事情记录得很详细、发生了什么、自己的情绪是什么样的。这种状态就已经不错了，能够觉察到自己的情绪、自己内心的想法，但是缺少对事件原因的追问。
+</li>
+<li class="md_li"><strong>总结</strong>：从字面上看，就是把分散的事情合成一个，反思是深入判断原因、模式、动力等，这和总结是不同的，总结是接在反思后面的，可以把形成的内容进行概括、归纳，但是，没有反思只有总结，那就有点不知所谓，能总结出什么来呢？
+</li>
+<li class="md_li"><strong>回顾</strong>：它和记录、反思、总结不是一个逻辑通路上的事情，它是在事情结束后进行的再次查看，以此可能从过往零散中发现规律。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../永澄暗箱/_image/sda-03.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">但是，这些做得再好，也并不是反思，你必须进入到下一个层次。</span>
+</p>
+
+
+<h3 id="toc_13">（三）反思入门者：知道反思是要向自己提问</h3>
+
+<p class="md_block">
+    <span class="md_line">“做自己的CEO”的学员笔记里这样写着：“今日我的觉察是……”，比如情绪波动、自我控制等等。那么，“觉察”和前面所说的“记录、反思、总结、回顾”之间是什么关系呢？</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">觉察是另外一个维度的事情，它出现在每个流程里：事件发生的时候你能觉察到可以直接启动反思、记录的时候可以觉察到需要记录的内容、反思过程里可以觉察到不同原因、总结的时候可以觉察用什么方法总结更好……</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">觉察是什么？从上面的例子中可以归纳出它的定义：<strong>觉察是一种向自己提出问题，并有动力自行回答的状态。</strong>它是一种状态，也是一种动作，比如说我可以觉察到自己的情绪，其实是向自己提问：“你现在的情绪是什么样的呢？”，然后很主动去回答，这种行动就是觉察（指技能）、状态就是觉察状态。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">进入到第三层次的人已经可以开始觉察了，这和前两层有了本质的区别。觉察很重要的，从TMBRT角度来看，这个世界不过是<strong>“刺激 - 响应”</strong>不断积累之后的结果，如果没有觉察，很容易成为“原始大脑”的傀儡，只要有刺激就会在第一反应的控制下给出响应。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">觉察的训练方法有很多种，冥想、内观、数息等等，让人看上去就不太想去训练（虽然它们确实很有用）。我喜欢站在概念上思考：既然觉察是一种向自己提问并愿意回答的状态，那究竟向自己提出哪些问题呢？</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">围绕着“刺激-响应”，我给出以下话术体系，作为觉察能力训练的新途径：</span>
+</p>
+
+
+<ul>
+<li class="md_li">刚才发生了什么事（刺激），让我做出了响应？
+</li>
+<li class="md_li">我刚才做了什么响应？
+</li>
+<li class="md_li">我如此响应是我想清楚之后决定的还是第一反映做出的？
+</li>
+<li class="md_li">在这个刺激下，我是不是一定要做出这个响应？
+</li>
+<li class="md_li">我为什么做出了这样的响应？背后的原因是什么？（选作）
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">多练练会有明显的收获，如果想要扩展更多知识，请移步至：<a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247484814&idx=1&sn=9951d07bbfc35d787d46005c98cddfc3&chksm=e927add7de5024c1753d34fa77457b8be4e87de0802ae52b797009e139745d670c419559fc2f&scene=21#wechat_redirect">《积极主动，一切成长的第一保障》</a>。</span>
+</p>
+
+
+<h3 id="toc_14">（四）中级反思者：形成经验，了解反思要提问哪些原因</h3>
+
+<p class="md_block">
+    <span class="md_line">达到这个级别的反思者，敏锐度通常较高、觉察能力也很强、反应阈值很小。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../永澄暗箱/_image/SDA-04.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这里对反应阈值进行定义。我们通常会对事情有个预期，事情发生后，如果超出预期叫做满意、达不到预期就是不满意，但是，究竟超出多少之后自己才会感受到满意/不满意呢？这个范围就是反应阈值。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果反应阈值很小，那么，外部的刺激很容易就会激发你的反思能力，开始对刚才发生的事件进行反思，而这个表现就代表着你的敏锐度和觉察能力都很强了。</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">这个级别的反思者会根据外部事件（触发/反馈）来启动自己的觉察过程，这也是整个大流程图最左侧所呈现的部分。这个时候的话术就会变得比上个层次的更加高级：</span>
+</p>
+
+
+<ul>
+<li class="md_li">刚才的刺激和回应分别是什么？
+</li>
+<li class="md_li">我之所以做出这个回应的原因是什么？
+</li>
+<li class="md_li">有没有什么第一反应（模式）在起作用？
+</li>
+<li class="md_li">按照TMBRT分析的话，这个模式是怎么形成的？
+</li>
+<li class="md_li">之所以我有/没有这份动力，主要是哪里在起作用/出问题？
+</li>
+<li class="md_li">这一次我可以优化我的什么假设？
+</li>
+<li class="md_li">我和外部环境的关系是否可以调整优化？
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">这已经达到了深度反思的水平了，再结合三层系统的方式对那些循环反复出现的问题进行升维处理，则很有可能跳出轮回，形成全新模式并让自己获得人生更好发展的下一个境界。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">相信我，从一无所知到第四个层次的反思者，刻意练习3个月就够了，一旦来到这个层次，你的成长的内驱力就可以形成。并且，反思是成长的最小行动、是极具复利、边际成本递减的高级手段，它表面上不张扬，内在却极其高级，一旦掌握，你就会一往无前！还是那句话：如果只学一个技能，那就是反思，早早上手吧。</span>
+</p>
+
+
+<h3 id="toc_15">（五）终身反思者：理解原理、掌握方法、持续实践的反思者</h3>
+
+<p class="md_block">
+    <span class="md_line">知其然、知其所以然，不仅了解方法的框架、具体的话术，还能够对每个细节有着丰富的心理表征，最后，从兴趣到能力最后到价值，充分体会到反思的价值后，成为坚定的实践者，这就是最后一个阶段。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这个阶段不是终点，只是一个里程碑，扎实投入时间，一年时间就可以轻松达到，再之后，你就可以坚定地直面人生的各种挑战，那都不是事儿了！</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">为了那些认可反思价值的伙伴达到这个里程碑，我提供一些我认为很重要的要点，供你在练习时参考：</span>
+</p>
+
+
+<ul>
+<li class="md_li">
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line"><strong>对假设的理解。</strong>有这几篇文章请查看一下：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247484612&idx=1&sn=e797703df453732af0f04fb04f17e708&chksm=e927ac9dde50258b9c5512964020bb9f30c1f4c577b25c293d9ca6457a0f8971dcc49b60e8eb&scene=21#wechat_redirect">《只做一件事就能改变，我会选什么？》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247484996&idx=1&sn=4288da081e01d657b1bac4ad28819fd0&chksm=e927ae1dde50270bd6007bd7c5118c0dfd67f69b356833411ac82e352b4e382347e092f23ab0&scene=21#wechat_redirect">《如何用复盘进行假设校验》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247484964&idx=1&sn=673748adb401494fdfd066fc00db8709&chksm=e927ae7dde50276b0ab23e70e4db35e906fd6ee5311b9061428fafb0e364f7b0794b738d5f15&scene=21#wechat_redirect">《复盘的底层逻辑都不掌握，怎么可能学会？》</a>
+</li>
+</ul>
+</li>
+<li class="md_li">
+<p class="md_block">
+    <span class="md_line"><strong>对方法的掌握。</strong>我建议采用<strong>僵化-固化-活化</strong>的基本训练思路进行实践；在开始的时候先定位自己的层次，千万不要高估自己的水平，如果还在第二个层次就不要认为自己是第四个层次的；慢慢来、持续做；刚刚开始的时候，可以“每天一反思”，慢慢把能力提升至“需要时就可以启动反思能力”；还有，就是对你的反思能力进行反思，每当要放弃的时候，就立刻反思是什么模式在让自己成为一个不靠谱的人？</span>
+</p>
+
+</li>
+</ul>
+
+<h3 id="toc_16">（六）本部分小结</h3>
+
+<p class="md_block">
+    <span class="md_line">上述两个部分分别讲述了因上努力和反思的层次，我绘制了一张关系对照图：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../永澄暗箱/_image/SDA-05.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">对于很多人来说，这张图没有用，但是，这却是我在咨询过程中最关键的心理表征。这张图也可以解释很多问题的原因，就说反思吧，很多人认为自己反思水平不行，是思考能力不够，其实并不是，<strong>反思能力不行的原因是你对这件事情原因的结构没有弄清楚。</strong>你越是对“因上努力”清晰，越是能够更好地进行反思。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">希望，未来某一天你会来到我面前跟我说：“永澄老师，我听了你说的建议，学会了反思的能力，它对我的帮助很大！”那我也就心满意足了。</span>
+</p>
+
+
+<h2 id="toc_17">三、模式和动力的关系</h2>
+
+<h3 id="toc_18">（一）模式是什么？</h3>
+
+<p class="md_block">
+    <span class="md_line">先说说什么是模式，不定义清楚很难讨论的。在我的文章中经常会出现这样的模型：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../永澄暗箱/_image/SDA-06.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">假如，你是中间蓝色的小人，在外部有刺激出现的时候，你做出一个响应。比如说，有人对你说：你长得好帅啊（刺激），你就会咧嘴笑笑并向对方表达感谢（响应）。我们将其称为：<strong>“刺激-响应”模型</strong>，这个模型在本系列的前两篇中都出现过，它的实例出现在我们生活的每一个时刻，是人类行为最基本的组成（行为都是一个个刺激和响应共同组成的链条）。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这里的“刺激”可以换成不同的词，如果换成“激励”，那就是经济学中很重要的激励理论；如果换成“if”，那就是著名的执行意图方法“if……then”；如果换成“触发器”，那就是我最常用到的<a class="md_compiled" href="../ji-zhu-mo-xing/tmbrt.html">TMBRT模型</a>。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../技术模型/_image/tmbrt-2.jpg" alt="TMBRT模型" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这里的道理没有什么太复杂的，但是，究竟什么是模式呢？我把刺激-响应模型图稍加调整：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../永澄暗箱/_image/SDA-07.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">举个例子来看：</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><img class="md_compiled " src="../../永澄暗箱/_image/SDA-08.jpg" alt="" title="" ></span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">当有刺激说你是“笨蛋”的时候，你立刻给了一个响应，大喊一声“谁？大胆？”，这里就有两句话术出现了：</span>
+</p>
+
+
+<ul>
+<li class="md_li">是什么（M）让我在遇到刺激的时候就直接给出这样的回应？
+</li>
+<li class="md_li">我为什么（Why）会在这个刺激下就直接给出这样的回应呢？
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">这两个问题的问法不太一样，但是答案都是指向一个对象，这个对象就叫做模式。也就是说，之所以有“刺激-响应模型”，是因为刺激作用在了你的某个模式上，然后这个模式发挥了作用，引发了响应。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果你的模式是“喜新厌旧”，那么，在遇到新的东西出现时，你很有可能直接给出响应是：“把旧的东西放弃”。如果你的模式是“相信一切都是财富”，那么在人生遇到打击的时候，你的响应就不会是持续的低落了。</span>
+</p>
+
+
+<h3 id="toc_19">（二）模式的分类</h3>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">我把模式分为两大类：<strong>先天模式和后天模式</strong>。从字面就能看出它的定义：</span>
+</p>
+
+
+<ul>
+<li class="md_li">先天模式是天生带来的，是写在基因之中的，比如“怕蛇”、“能耗最小原则”等；
+</li>
+<li class="md_li">后天模式是后天训练形成的，不过，根据脑科学的研究，后天形成的模式也可以分为两大类，一种是在16岁之前形成的模式，它们写在神经网络的突触中，非常稳定、难以改变，另外一种是16岁之后形成的模式，通过刻意练习也可以构建和更改。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">此外，还有一种理论划分的模式，那就是把先天模式和16岁之前形成的后面模式和在一起，共同称为天赋，更多内容详见《盖洛普优势识别器》。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed"><strong>后天模式是怎么产生的呢？答案就是：“刺激-响应模型”。</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">我曾经举过例子：中午12点你刚出门，突然发现一只兔子撞死在树上了，你平白捡到一顿午餐。第二天，你又在12点出门，恰好又一只兔子撞死了，又被你捡到了。第三天，还是12点，你又捡到了只兔子……之后的每天都是这样的结果，于是你就形成了一个小系统：12点了（刺激）- 模式（这个时候出门就能捡到兔子） - 出门并捡到兔子（响应），这个模式就会被固化在你的身上，模式也形成了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">看我们的流程图：先天模式是写在基因里天生就带来的，所以，它在外部环境的作用下慢慢形成了一些结果积累（自发因），这些积累和外部环境（外部因）共同作用就会形成结果因。第一个结果因和外部环境共同作用（TMBRT）就会形成第一个后天模式，后天模式也会通过和外部环境作用继续形成后天因，这个时候，在外部因、结果因、后天因的共同作用下，我们开始持续形成后天模式，这就是你后天模式形成的原理。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果你听过一个词：原生家庭问题，那你就知道了，整个问题就是在这个持续循环中出现了，在这个循环中你很有可能会形成胆小、暴躁、不相信男人、厌学等等模式，当然，也可能生成温和、积极、关爱、感恩的模式，而这些模式将会影响你产生出什么样的结果、表现、问题，影响着你和他人的关系。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">可能有的伙伴对“外部因”、“自发因”、“结果因”、“后天因”这些用词中的“因”很不理解，那说明你很可能还处于“因上努力”的前两层水平：要不果上努力、要不线性因果关系的思维方式。<strong>如果你知道一个结果由多个原因组成，你就会去分析，有哪些外部原因，哪些后天模式生成的原因、哪些先天模式生成的原因？</strong></span>
+</p>
+
+
+<h3 id="toc_20">（三）了解模式的价值</h3>
+
+<p class="md_block">
+    <span class="md_line">你可以把模式理解为月饼模子、原因是由这个模子生产出的月饼，而自己的表现、各种问题等都是由多个月饼包装组成的礼盒。如果你不知道有模式的存在，那么你会把礼盒不好的问题归结到月饼上，但是现在，你会多思考一步，会问问自己：“是什么模式让月饼变得不好了呢？”</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">要知道，<strong>这个问题非常重要，因为它直接打到了反思的关键上：对刺激、模式、响应进行再思考。</strong></span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">除了可以支持反思之外，关于模式你必须还要知道几个关键的推论：</span>
+</p>
+
+
+<ul>
+<li class="md_li">模式没有好坏，不要把表现（结果）和模式混为一谈；
+</li>
+<li class="md_li">模式可以产生动力，你可以用高耗能（使用意志力）或者低• 耗能两种方式驱动自己，让模式发挥作用都是低耗能的，符合“能耗最小原则”；
+</li>
+<li class="md_li">模式可以产生动力，如果你觉得没有动力做事情了，通常都是模式这里出问题了；
+</li>
+<li class="md_li">模式是你的内部需求，因为它会低耗能运转，它就会驱动你去产生行动；
+</li>
+<li class="md_li">需求是价值判断的结果，越清晰模式越了解自己的价值取向；
+</li>
+<li class="md_li">模式会影响价值判断，通过价值取向可以找到你的模式；
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">这些推论有点深，我就不展开了，这里只说说：<strong>模式和动力的关系。</strong></span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">很多时候我们想要做事，或者知道问题的原因但是就不去行动，都是因为缺乏动力造成的，那我们就会问了：“为什么我没有动力做事情啊？”</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">如果不知道模式能够产生动力的话，那就会把上述问题各种归因，比如“你还是不那么迫切地想要啊”、“你痛得还不够啊……”之类的解释。但是，<strong>没有动力的原因是模式被限制了，必须去往模式上分析才能解决动力问题</strong>。</span>
+</p>
+
+
+<h2 id="toc_21">四、低耗损模式说明</h2>
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">哪些模式可能出问题呢？我在流程图里标注了六种内外部因素，其中：</span>
+</p>
+
+
+<ul>
+<li class="md_li"><strong>低耗能</strong>：充分发挥天赋，让天赋的模式起作用；让你的内部动机起作用，具体参考自我决定论；另外是持续优化你的逻辑六层次体系，关于逻辑六层次，我会专门建立个网站来介绍我的假设体系的。
+</li>
+<li class="md_li"><strong>低耗能</strong>：除了内部的模式之外，如果处于利于“被动积累”的外部环境中，也是极低耗能的，甚至它可以给你赋能，让你实现跃迁。
+</li>
+<li class="md_li"><strong>高耗能</strong>：通常来说，你发挥意志力去做事情就开始耗损自己，越是自我控制越是自我损耗，所以，为什么乔布斯让大家要“做你所爱，爱你所做”，就是避免使用意志力带来的损耗。还有一种耗损是因为外部动机在起作用，所谓的奖励会伤人，就是这个意思。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">写作的时候，群里一个小伙伴说：“很佩服你们都能完成你们的目标。我一到晚上我就很亢奋，听课，看书，看电视……总是不想上床睡觉，经常失眠，有时候一天一夜不睡觉，到了晚上依然会睡不着。到了早上的时候我怕冷就卷在被窝不想起来，直到中午，实在没办法了才起来。 这样好痛苦。”</span>
+</p>
+
+
+<p class="md_block md_has_block_below md_has_block_below_ul">
+    <span class="md_line">用整个系统动力来解释，她的系统出现了很大问题：</span>
+</p>
+
+
+<ul>
+<li class="md_li">果上努力，只是看到自己的表现，没有分析原因是什么，所以，根本不可能有改进；
+</li>
+<li class="md_li">没有反思，不去思考是哪些模式导致的，无法待在认知紧张状态下，想尽办法让自己的能量都耗损在容易做的事情上；
+</li>
+<li class="md_li">能量大量损耗，自己的优势模式没有发挥，意志力也被自己的“不想睡、也不想让自己一直这样”给损耗了，明明是让自己获得进步的机会，但是却没有意志力让自己直面挑战。
+</li>
+</ul>
+
+<p class="md_block">
+    <span class="md_line">要理清类似的一团糟，一定要分清楚因果、不断反思自己的模式，为什么一到晚上就兴奋，是什么造成的，慢慢理出线头，然后把自己的逻辑六层次中的原则、信念都更换成新的，改变才能发生。毕竟，改变，从信念开始。</span>
+</p>
+
+
+<h2 id="toc_22">五、总结</h2>
+
+<p class="md_block">
+    <span class="md_line">至此，整个流程图的大约框架内容我已经分析完了，对我来说是一遍梳理，同时，对我的事业发展也非常有价值。不过，也正是因为我使用了大量概念化的文字，导致文章的阅读难度较高，比如“逻辑六层次”我就没有展开讲解。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这些艰涩难懂的文章，是我不断升维的过程。很多人说我为什么总是写一些别人看不懂的东西，这不是曲高和寡么？我的回答就是四个字：必要难度。我要先完成升维的过程，然后再降维去进行打击，毕竟降维容易、升维难。所以，也难为你跟着看这些不太懂的文字了。</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">为了我的使命实现：引领职场青年实现持续高效能成长，我已经形成了以下的体系：<br /></span>
+    <span class="md_line">• 核心思维模型：系统思维、价值思维、黄金思维圈、哲学+问题、CIP模型<br /></span>
+    <span class="md_line">• “个人成长操作系统”系统整体结构；<br /></span>
+    <span class="md_line">• 双核自驱引擎分析；<br /></span>
+    <span class="md_line">• “个人成长操作系统”系统动力原理分析；</span>
+</p>
+
+
+<p class="md_block">
+    <span class="md_line">这让我越来越坚定了，越来越相信我是可以做到“持续高效能成长”的，我会沿着这条路一直走下去的。</span>
+</p>
+
+
+<h2 id="toc_23">六、相关资料</h2>
+
+<ul>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247486321&idx=1&sn=4c7e164af8ac06c430f04fd36a5da40f&chksm=e927a328de502a3ea89cd4f2434c91bf0758e758178ab052131b60b8076ce6013e368a852a94#rd">《“个人成长操作系统”系统动力原理分析框架-01》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247486327&idx=1&sn=d25b24c7dc0b305488f682657ff13f66&chksm=e927a32ede502a3867e487882a1783081790126c788f8564e328909280233cbc5486ac66a813#rd">《“个人成长操作系统”系统动力原理分析框架-02》</a>
+</li>
+<li class="md_li"><a class="md_compiled" href="https://mp.weixin.qq.com/s?__biz=MzIzOTY0OTA3OA==&mid=2247486335&idx=1&sn=c323ef9c44115d7f43f44d05596eb863&chksm=e927a326de502a307d9aaf2453e9e1a3197af9dae01f88a88c3b7d5cbca8ab57318049cd9067#rd">《“个人成长操作系统”系统动力原理分析框架-03》</a>
+</li>
+</ul>
+
+<hr>
+
+<h2 id="toc_24">ChangeLog</h2>
+
+<ul>
+<li class="md_li">2017-11-09 发布内容 by 易仁永澄
+</li>
+</ul></div>
+
+
+</div>
+
+
+<div class=" pure-u-0-24 pure-u-sm-0-24 pure-u-md-6-24 pure-u-lg-1-5 pure_cell">
+
+
+<link href="../../fb_static/api/html/auto_toc/auto_toc.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+
+
+
+
+<style type="text/css">.doc_toc_container.affix{ top: 20px }</style>
+
+<div class="doc_toc">
+  <div class="doc_toc_container">
+    <div class="nav"><ul>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_0">“个人成长操作系统”系统动力分析原理</a>
+<ul>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_1">〇、引言</a>
+<ul>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_2">（一）什么叫动力</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_3">（二）本分析的价值</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_4">一、问题原因分析原理</a>
+<ul>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_5">（一）果上努力</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_6">（二）线性因果关系</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_7">（三）多因果关系</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_8">（四）结构化因果关系</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_9">（五）本部分小结</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_10">二、深度反思过程</a>
+<ul>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_11">（一）不反思，只要认知放松就好了</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_12">（二）反思新人：知道反思很重要，但是不会用</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_13">（三）反思入门者：知道反思是要向自己提问</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_14">（四）中级反思者：形成经验，了解反思要提问哪些原因</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_15">（五）终身反思者：理解原理、掌握方法、持续实践的反思者</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_16">（六）本部分小结</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_17">三、模式和动力的关系</a>
+<ul>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_18">（一）模式是什么？</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_19">（二）模式的分类</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_20">（三）了解模式的价值</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_21">四、低耗损模式说明</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_22">五、总结</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_23">六、相关资料</a>
+</li>
+<li>
+<a href="pgossystemdynamicanalysis.html#toc_24">ChangeLog</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/affix.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/lib/bootstrap/scrollspy.js@version=0.0811"></script>
+<script type="text/javascript" src="../../fb_static/api/html/auto_toc/auto_toc.js@version=0.0811"></script>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+<div class="sidebar_clicker click_to_close_sidebar"><span class="bar"></span>
+
+</div>
+
+
+
+
+
+
+
+<style type="text/css">.sidebar {
+    left: 0px;
+    right: auto;
+    border-right: 1px solid #eee;
+
+    width: 250px;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background: #fafafa;
+}
+
+
+
+</style>
+
+
+<script type="text/javascript" src="../../fb_static/api/html/auto_sidebar.js@version=0.0811"></script>
+<link href="../../fb_static/api/html/auto_sidebar.css@version=0.0811.css" type="text/css" rel="stylesheet"/>
+
+<script>run_sidebar("left", 'sidebar', 250, "show");
+</script>
+
+    <script>$(document).ready(function(){
+    var sidebar = $('.index_body'); var current = $('.index_body .active');
+    if (sidebar.length && current.length){ sidebar.scrollTop(current.offset().top - sidebar.height()/2 + 100);}
+})
+</script>
+  </body>
+
+</html>
